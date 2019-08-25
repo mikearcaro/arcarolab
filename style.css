@@ -320,6 +320,26 @@ li {
 }
 
 
+@media (min-width:992px) {
+    .desktop-only {
+        display:block !important;
+    }
+}
+ 
+@media (max-width: 991px) {
+    .mobile-only {
+        display:block !important;
+    }
+    .padding-left, .padding-right, .welcome-single-slide, .welcome-post-sliders owl-carousel {
+       display: none;
+  }
+    .desktop-only {
+        display:none !important;
+    }
+}
+
+
+
 
 /* --------------------
 :: 3.0 Menu Area CSS
