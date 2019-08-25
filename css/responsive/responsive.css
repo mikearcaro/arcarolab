@@ -30,6 +30,14 @@
         padding: 7.5px 30px;
     }
 
+.breadcumb-area .bradcumb-title h2 {
+    font-size: 28px;
+    color: #fff;
+}
+.breadcumb-area {
+    max-width: 100%;
+    height: 100%;
+}
 
 }
 
@@ -69,6 +77,14 @@
         color: #fff;
         margin-bottom: 30px;
     }
+    .breadcumb-area .bradcumb-title h2 {
+    font-size: 28px;
+    color: #fff;
+}
+.breadcumb-area {
+    max-width: 100%;
+    height: 100%;
+}
     .footer_area .navbar-toggler {
         margin-bottom: 0;
     }
