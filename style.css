@@ -345,6 +345,8 @@ li {
 
 .navbar.navbar-expand-lg {
     padding-bottom: 10;
+    margin-left: -12%;
+    margin-right: -15%;
 }
 
 .navbar.navbar-expand-lg .navbar-nav .nav-link {
