@@ -1,4 +1,4 @@
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) {
     .post-author a,
     .post-date a,
     .post-favourite a,
@@ -6,6 +6,27 @@
     .post-share a {
         font-size: 12px;
     }
+    
+.navbar.navbar-expand-lg {
+    padding-bottom: 10;
+    margin-left: -12%;
+    margin-right: -15%;
+}
+
+.navbar.navbar-expand-lg .navbar-nav .nav-logo {
+    padding: 40px 0px;
+    color: #373f6d;
+    text-transform: uppercase;
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+}
+.navbar.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 40px 30px;
+    color: #373f6d;
+    text-transform: uppercase;
+    font-size: 26px;
+}
 
 }
 
@@ -25,10 +46,13 @@
     }
     .footer_area .navbar-toggler {
         margin-bottom: 0;
+        margin-left: -125px;
     }
     .navbar.navbar-expand-lg .navbar-nav .nav-link {
         padding: 7.5px 30px;
+        margin-left: -125px;
     }
+
 
 .breadcumb-area .bradcumb-title h2 {
     font-size: 28px;
@@ -76,6 +100,7 @@
         width: 100%;
         color: #fff;
         margin-bottom: 30px;
+        margin-left: 0px;
     }
     .breadcumb-area .bradcumb-title h2 {
     font-size: 28px;
@@ -90,6 +115,7 @@
     }
     .navbar.navbar-expand-lg .navbar-nav .nav-link {
         padding: 7.5px 30px;
+        margin-left: 0px;
     }
     .pagination-area .page-status {
         margin-top: 30px;

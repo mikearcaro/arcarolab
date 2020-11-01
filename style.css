@@ -24,11 +24,9 @@
 ----------------------------------- */
 
 /* ***** Fonts ***** */
-
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700|Quicksand:300,400,500,700|Shadows+Into+Light+Two');
 
 /* ***** Import CSS ***** */
-
 @import 'css/bootstrap/bootstrap.min.css';
 @import 'css/others/animate.css';
 @import 'css/others/magnific-popup.css';
@@ -353,7 +351,7 @@ li {
     padding: 40px 30px;
     color: #373f6d;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 26px;
 }
 
 .navbar.navbar-expand-lg .navbar-nav .nav-link:hover,
