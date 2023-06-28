@@ -57,9 +57,10 @@
 
 .row {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
     
+
 .topcolumn{
   float: center; /* Remove float property */
   margin-left: auto; /* Center the column */
@@ -102,6 +103,20 @@
   padding: 0 8px;
     text-align: center;
 }
+   
+    
+.column {
+    flex-basis: 50%;
+}
+
+.left-column {
+    text-align: left;
+}
+
+.right-column {
+    text-align: right;
+}
+    
     
 </style>
 
@@ -246,21 +261,24 @@
     
 <hr style="height:35pt; visibility:hidden;" />
 
-<h5 style="font-size:80%; text-align:left; margin-left: 20px;"> <!-- Added margin-left: 20px; -->
-    Lab Alumni
-</h5>
-<h8 style="font-size:55%; text-align:left; margin-left: 20px;"> <!-- Added margin-left: 20px; -->
-    Marcelina Martynek
-</h8>
-<h8 style="font-size:55%; text-align:left; margin-left: 20px;"> <!-- Added margin-left: 20px; -->
-    Marco Balboa
-</h8>
-<h8 style="font-size:55%; text-align:left; margin-left: 20px;"> <!-- Added margin-left: 20px; -->
-    Jennifer O'Neill
-</h8>
-<h8 style="font-size:55%; text-align:left; margin-left: 20px;"> <!-- Added margin-left: 20px; -->
-    Wei Song Ong
-</h8>
+<div class="row">
+    <div class="column left-column">
+        <h5 style="font-size:80%; text-align:left; margin-left: 20px;">Lab Alumni</h5>
+        <h8 style="font-size:55%; text-align:left; margin-left: 20px;">Marcelina Martynek</h8>
+        <h8 style="font-size:55%; text-align:left; margin-left: 20px;">Marco Balboa</h8>
+        <h8 style="font-size:55%; text-align:left; margin-left: 20px;">Jennifer O'Neill</h8>
+        <h8 style="font-size:55%; text-align:left; margin-left: 20px;">Wei Song Ong</h8>
+    </div>
+    <div class="column right-column">
+ <h5 style="font-size:80%; text-align:right; margin-right: 20px;">Collaborators</h5>
+        <h8 style="font-size:55%; text-align:right; margin-right: 20px;"><a href="https://neuro.hms.harvard.edu/faculty-staff/margaret-livingstone">Margaret Livingstone</a></h8>
+        <h8 style="font-size:55%; text-align:right; margin-right: 20px;"><a href="https://psychology.berkeley.edu/people/kevin-weiner">Kevin Weiner</a></h8>
+        <h8 style="font-size:55%; text-align:right; margin-right: 20px;"><a href="https://www.neuroscience.umn.edu/people/kendrick-kay-phd">Kendrick Kay</a></h8>
+        <h8 style="font-size:55%; text-align:right; margin-right: 20px;"><a href="https://www.cc.gatech.edu/people/nabil-imam">Nabil Imam</a></h8>
+
+    </div>
+</div>
+
 
 <!-- ****** Footer Menu Area Start ****** -->
 	<footer class="footer_area">
