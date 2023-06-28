@@ -54,7 +54,15 @@ h1
 h2,
 h3,
 h4,
-h5,
+h5{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #373f6d;
+    line-height: 1.25;
+    margin-top: 14px;
+    line-height: 1.25; /* Adjust the line-height value as desired */
+}
+
 h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
