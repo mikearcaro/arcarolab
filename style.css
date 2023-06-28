@@ -60,11 +60,25 @@ h6 {
     font-weight: 600;
     color: #373f6d;
     line-height: 1.25;
+    margin-top: 14px;
+    line-height: .5; /* Adjust the line-height value as desired */
 }
 
 p {
     color: #51545f;
-    font-size: 16px;
+    font-size: 18px;
+}
+
+h7 {
+    display: block;
+    color: #51545f;
+    font-size: 18px;
+}
+
+h8 {
+    display: block;
+    color: #51545f;
+    font-size: 18px;
 }
 
 .section_padding_100 {
@@ -698,6 +712,7 @@ li {
     text-transform: uppercase;
 }
 
+
 .single-icon > a:hover {
     color: #fc6c3f;
 }
@@ -772,7 +787,7 @@ li {
     width: 100%;
     line-height: 5px;
     border-radius: 2px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .about-me-widget-thumb img {
@@ -781,7 +796,9 @@ li {
     height: 50%;
     width: 50%;
     margin: auto;
-    border-radius: 50%;
+    border-radius: 50%; /* Update border-radius to 50% for a circular shape */
+    overflow: hidden;
+    object-fit: cover;
 }
 
 .about-me-widget h4 {
