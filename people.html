@@ -55,25 +55,69 @@
   font-size: 1.25em;
 }
 
-.column1 {
-  float: left;
-  width: 35%;
-  padding: 10px;
+.row {
+  display: flex;
+  justify-content: space-between;
 }
-.column2 {
-  float: left;
-  width: 65%;
+    
 
+.topcolumn{
+  float: center; /* Remove float property */
+  margin-left: auto; /* Center the column */
+  margin-right: auto; /* Center the column */
+  width: 50%;
+  margin-bottom: 56px;
+  padding: 0 8px;
+  text-align: center;
 }
 
+<!--
 /* Three columns side by side */
 .members_column {
-  float: left;
+  float: center;
   width: 33.3%;
   margin-bottom: 16px;
   padding: 0 8px;
+  text-align: center;
+}
+-->
+    
+/* Two columns side by side */
+.members_column1 {
+  float: center; /* Remove float property */
+  margin-left: auto; /* Center the column */
+  margin-right: auto; /* Center the column */
+  width: 50%;
+  margin-bottom: 56px;
+  padding: 0 8px;
+ text-align: center;
+}
+    
+/* Two columns side by side */
+.members_column2 {
+  float: center; /* Remove float property */
+  margin-left: auto; /* Center the column */
+  margin-right: auto; /* Center the column */
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+    text-align: center;
+}
+   
+    
+.column {
+    flex-basis: 50%;
 }
 
+.left-column {
+    text-align: left;
+}
+
+.right-column {
+    text-align: right;
+}
+    
+    
 </style>
 
     <!-- ****** Header Area Start ****** -->
@@ -112,9 +156,9 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="publications.html">Publications</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <!--<li class="nav-item">
                                         <a class="nav-link" href="resources.html">Resources</a>
-                                    </li>
+                                    </li>-->
                                     <li class="nav-item">
                                         <a class="nav-link" href="contact.html">Contact</a>
                                     </li>
@@ -127,76 +171,80 @@
         </header>
         <!-- ****** Header Area End ****** -->
 
-<!-- Single Widget Area -->
+<!-- Red bar -->
 <div class="single-widget-area about-me-widget text-left">
     <div class="widget-title">
         <h6></h6>
     </div>
+</div>
+
 
 <div class="row">
-    <div class="column1">
+    <div class="topcolumn">
         <div class="about-me-widget-thumb">
-            <img src="img/people-img/Arcaro.jpg" alt="">
+            <img src="img/people-img/Arcaro.jpg" alt="" style="width: 40%; height: 40%;">
         </div>
         <h4>Michael Arcaro</h4>
-        <p>Principal Investigator</p>
-    	<div class="single-icon">
-    	    <a href="https://twitter.com/MichaelJArcaro"><img src="img/links-img/twitter.png" style="width:8%;height:8%;"></a>
-    		<a href="https://scholar.google.com/citations?user=07tNFdgAAAAJ&hl=en"><img src="img/links-img/googles.png" style="width:8%;height:8%;"></a>
-    		<a href="pdf/Arcaro_CV_current.pdf"><img src="img/links-img/cv.jpg" style="width:8%;height:8%;"></a>
-    	</div>
-    </div>
-    <div class="column2">
-       <hr style="height:20pt; visibility:hidden;" />
-       <p style="font-size:60%; text-align:left;">
-        We're looking to hire a postdoc to work on projects tracking behavioral and neural (structural + functional) changes across development in tree shrews, macaques, and humans. <A HREF="mailto: marcaro@sas.upenn.edu"> E-mail Mike</A> if interested.</p>
-        <hr style="height:10pt; visibility:hidden;" />
-        <p style="font-size:60%; text-align:left;">
-        We have an opening for a research assistant. <A HREF="https://wd1.myworkdaysite.com/en-US/recruiting/upenn/careers-at-penn/job/Goddard-Laboratories/Research-Specialist_JR00046920"> Click here</A> for the official job posting. <A HREF="mailto: marcaro@sas.upenn.edu"> E-mail Mike</A> if interested.</p>
-        <hr style="height:10pt; visibility:hidden;" />
-        <p style="font-size:60%; text-align:left;">
-        We're accepting grad students through <A HREF="https://psychology.sas.upenn.edu/graduate"> psychology</A> and <A HREF="https://www.med.upenn.edu/ngg/"> neuroscience</A>.
-        </p>
-
+        <h7>Principal Investigator</h7>
+        <div class="single-icon">
+            <a href="https://twitter.com/MichaelJArcaro"><img src="img/links-img/twitter.png" style="width:5%;height:5%;"></a>
+            <a href="https://scholar.google.com/citations?user=07tNFdgAAAAJ&hl=en"><img src="img/links-img/googles.png" style="width:5%;height:5%;"></a>
+            <a href="pdf/Arcaro_CV_current.pdf"><img src="img/links-img/cv.jpg" style="width:5%;height:5%;"></a>
+        </div>
     </div>
 </div>
 
-<hr style="height:15pt; visibility:hidden;" />
+<!--<hr style="height:15pt; visibility:hidden;" /> -->
 
 <div class="row">
+    <div class="members_column1">
+        <div class="about-me-widget-thumb">
+            <img src="img/people-img/vlad_circle1.png" alt="" style="width: 40%; height: 40%;">
+        </div>
+        <h4>Vladislav Ayzenberg</h4>
+        <h7>Postdoctoral Researcher</h7>
+        <h7><a href="https://mindcore.sas.upenn.edu/people/fellows/"> MindCORE Fellow </a></h7>
+        <div class="single-icon">
+            <a href="https://twitter.com/vayzenberg90"><img src="img/links-img/twitter.png" style="width:5%;height:5%;"></a>
+            <a href="https://scholar.google.com/citations?user=MDUTi6sAAAAJ&hl=en"><img src="img/links-img/googles.png" style="width:5%;height:5%;"></a>
+            <a href="pdf/Ayzenberg - CV JUN 2023.pdf"><img src="img/links-img/cv.jpg" style="width:5%;height:5%;"></a>
+            <a href="https://sites.google.com/view/vlad-ayzenberg/"><img src="img/links-img/16669.png" style="width:5%;height:5%;"></a>
+        </div>
+    </div>
 
-    <!--    
-	  <div class="members_column">
-
-	        <div class="about-me-widget-thumb">
-	            <img src="img/people-img/rainbowbrain.png" alt="">
-	        </div>
-	        <h4></h4>
-	        <p>Postdoctoral Researcher</p>
-	        <div class="single-icon">
-	        	<a href=""><img src="img/links-img/googles.png" style="width:8%;height:8%;"></a>
-	        </div>
-	  </div>
--->
-    
-	  <div class="members_column">     
-	        <div class="about-me-widget-thumb">
-	            <img src="img/people-img/lucy_cropped.jpg" alt="">
-	        </div>
-	        <h4>Lucy Song</h4>
-	        <p>Graduate Student</p>
-	  </div>
-      <div class="members_column">     
-	        <div class="about-me-widget-thumb">
-	            <img src="img/people-img/MeyerE.jpg" alt="">
-	        </div>
-	        <h4>Emily Meyer</h4>
-	        <p>Graduate Student</p>
-            <div class="single-icon">
-    	    <a href="https://twitter.com/emilyemeyer"><img src="img/links-img/twitter.png" style="width:8%;height:8%;"></a>
-                </div>
-	  </div>
+    <div class="members_column1">
+        <div class="about-me-widget-thumb">
+            <img src="img/people-img/HirokiOishi.jpg" alt="" style="width: 40%; height: 40%;">
+        </div>
+        <h4>Hiroki Oishi</h4>
+        <h7>Postdoctoral Researcher</h7>
+        <h7>co-advised w/ <a href="https://cnl.berkeley.edu/index.html"> Kevin Weiner </a></h7>
+        <div class="single-icon">
+        </div>
+    </div>
 </div>
+
+<div class="row">
+    <div class="members_column2">
+        <div class="about-me-widget-thumb">
+            <img src="img/people-img/lucy_cropped.jpg" alt="" style="width: 40%; height: 40%;">
+        </div>
+        <h4>Lucy Song</h4>
+        <h7>Graduate Student</h7>
+    </div>
+
+    <div class="members_column2">
+        <div class="about-me-widget-thumb">
+            <img src="img/people-img/MeyerE.jpg" alt="" style="width: 40%; height: 40%;">
+        </div>
+        <h4>Emily Meyer</h4>
+        <h7>Graduate Student</h7>
+        <div class="single-icon">
+            <a href="https://twitter.com/emilyemeyer"><img src="img/links-img/twitter.png" style="width:5%;height:5%;"></a>
+        </div>
+    </div>
+</div>
+
     
 <!--    
 <hr style="height:15pt; visibility:hidden;" />
@@ -211,27 +259,28 @@
 </div>
 -->
     
-<hr style="height:25pt; visibility:hidden;" />
+<hr style="height:35pt; visibility:hidden;" />
 
-    <div class="row">
-        <hr style="height:10pt; visibility:hidden;" />
-        <p style="font-size:80%; text-align:left;">
-        Lab Alumni
-        </p>
-     </div>
-        <p style="font-size:55%; text-align:left;">
-        Marcelina Martynek
-        </p>
-        <p style="font-size:55%; text-align:left;">
-        Marco Balboa
-        </p>
-        <p style="font-size:55%; text-align:left;">
-        Jennifer O'Neill
-        </p>
-        <p style="font-size:55%; text-align:left;">
-        Wei Song Ong
-        </p>
+<div class="row">
+    <div class="column left-column">
+        <h5 style="font-size:80%; text-align:left; margin-left: 20px;">Lab Alumni</h5>
+        <h8 style="font-size:55%; text-align:left; margin-left: 20px;">Marcelina Martynek</h8>
+        <h8 style="font-size:55%; text-align:left; margin-left: 20px;">Marco Balboa</h8>
+        <h8 style="font-size:55%; text-align:left; margin-left: 20px;">Jennifer O'Neill</h8>
+        <h8 style="font-size:55%; text-align:left; margin-left: 20px;">Wei Song Ong</h8>
     </div>
+    <div class="column right-column">
+ <h5 style="font-size:80%; text-align:right; margin-right: 20px;">Collaborators</h5>
+        <h8 style="font-size:55%; text-align:right; margin-right: 20px;"><a href="https://neuro.hms.harvard.edu/faculty-staff/margaret-livingstone">Margaret Livingstone</a>,  Harvard Medical School</h8>
+        <h8 style="font-size:55%; text-align:right; margin-right: 20px;"><a href="https://psychology.berkeley.edu/people/kevin-weiner">Kevin Weiner</a>,   UC Berkeley</h8>
+        <h8 style="font-size:55%; text-align:right; margin-right: 20px;"><a href="https://www.neuroscience.umn.edu/people/kendrick-kay-phd">Kendrick Kay</a>,   U of Minnesota</h8>
+        <h8 style="font-size:55%; text-align:right; margin-right: 20px;"><a href="https://www.cc.gatech.edu/people/nabil-imam">Nabil Imam</a>,   Georgia Tech</h8>
+        <h8 style="font-size:55%; text-align:right; margin-right: 20px;"><a href="https://scholar.google.com/citations?user=3QgQWQgAAAAJ&hl=en">Joe Wekselblatt</a>,   CalTech</h8>
+        <h8 style="font-size:55%; text-align:right; margin-right: 20px;"><a href="https://www.aic.pitt.edu/people/t-kevin-hitchens-phd-mba">Kevin Hitchens</a>,   U of Pittsburgh</h8>
+
+    </div>
+</div>
+
 
 <!-- ****** Footer Menu Area Start ****** -->
 	<footer class="footer_area">
