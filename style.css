@@ -67,9 +67,8 @@ h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #373f6d;
-    line-height: 1.25;
-    margin-top: 14px;
-    line-height: .5; /* Adjust the line-height value as desired */
+    line-height: 1;
+    margin-top: 12px;
 }
 
 p {
@@ -358,7 +357,24 @@ li {
     }
 }
 
+.content-container {
+    display: flex;
+    align-items: stretch; /* This ensures that the children stretch to fill the container */
+}
 
+.main-content-area, .right-side-column {
+    /* Your existing styles, but ensure no fixed height is set so they can grow with content */
+}
+
+.right-side-column::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0; /* Stretch from top to bottom of the parent */
+    width: 2px;
+    background-color: black;
+}
 
 
 /* --------------------
@@ -372,10 +388,11 @@ li {
 }
 
 .navbar.navbar-expand-lg .navbar-nav .nav-link {
-    padding: 40px 30px;
+    padding: 40px 20px;
     color: #373f6d;
     text-transform: uppercase;
-    font-size: 26px;
+    font-size: 36px;
+    margin-bottom: -22%;
 }
 
 .navbar.navbar-expand-lg .navbar-nav .nav-link:hover,
@@ -795,7 +812,7 @@ li {
     width: 100%;
     line-height: 5px;
     border-radius: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
 .about-me-widget-thumb img {

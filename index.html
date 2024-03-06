@@ -20,40 +20,87 @@
     <!-- Responsive CSS -->
     <link href="css/responsive/responsive.css" rel="stylesheet">
 
+    <style>
+        @media (min-width:992px) {
+            body {
+                padding-top: 20px;
+                padding-left: 120px;
+                padding-right: 120px;
+                font-size: 32px;
+                margin: 0px;
+            }
+        }
+
+        @media (max-width:991px) {
+            body {
+                padding-top: 5px;
+                padding-left: 20px;
+                padding-right: 20px;
+                font-size: 20px;
+                margin: 0px;
+            }
+        }
+
+        hr {
+            height: 2pt;
+            background-color: grey;
+            border: none;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+         .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .main-content-area {
+            flex: 1; /* Adjust this to change the main content width */
+            max-width: 70%; /* Adjust this to control the width of the main content area */
+        }
+
+        .right-side-column {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .right-side-column h2 {
+            font-size: 40px; /* Larger font size for the header */
+            margin-bottom: 30px;
+        }
+
+        .right-side-column section p {
+            font-size: 20px; /* Larger font size for the paragraph text */
+        }
+
+        /* Adjust height to match the main content area */
+        .right-side-column > div {
+            flex: 1;
+        }
+        
+        .navbar.navbar-expand-lg .navbar-nav .nav-link {
+            padding: 10px 50px;
+            margin-left: -5%;
+            margin-right: -5%;
+            margin-bottom: 0%;
+            color: #373f6d;
+            text-transform: uppercase;
+            font-size: 35px;
+        }
+        
+    </style>
 </head>
 
-<style>
-@media (min-width:992px) {
-    body {
-      padding-top: 20px;
-      padding-left: 120px;
-      padding-right: 120px;
-      font-size: 32px;
-      margin:  0px;
-    }
-}
-@media (max-width:991px) {
-    body {
-      padding-top: 5px;
-      padding-left: 20px;
-      padding-right: 20px;
-      font-size: 20px;
-      margin:  0px;
-    }
-}
-    
-      hr {
-            height: 2pt; /* Sets the thickness of the HR line */
-            background-color: grey; /* Sets the background color of the HR line to grey */
-            border: none; /* Removes the default border */
-            width: 100%; /* Adjust the width to prevent the HR from extending to the edges */
-            margin: 0 auto; /* Centers the HR within its container */
-        }
-</style>
-
 <body>
+  
+     <!-- Your existing HTML content starts here -->
     <img src="img/core-img/arcarolab_single.gif" width="30%" height="30%">
-    
+
+
+
     <!-- Preloader Start -->
     <div id="preloader">
         <div class="yummy-load"></div>
@@ -70,7 +117,7 @@
                             <!-- Menu Area Start -->
                             <div class="collapse navbar-collapse justify-content-center" id="yummyfood-nav">
                                 <ul class="navbar-nav" id="yummy-nav">
-    								<!--
+                                    <!--
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                                         <div class="dropdown-menu" aria-labelledby="yummyDropdown">
@@ -91,9 +138,9 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="publications.html">Publications</a>
                                     </li>
-                                    <!--<li class="nav-item">
-                                        <a class="nav-link" href="resources.html">Resources</a>
-                                    </li>-->
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://github.com/arcaro-lab">Github</a>
+                                    </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="contact.html">Contact</a>
                                     </li>
@@ -106,157 +153,226 @@
         </header>
         <!-- ****** Header Area End ****** -->
 
-<hr style="height:5pt; visibility:hidden;" />
 
-<div class="desktop-only"
-    <!-- ****** Welcome Post Area Start ****** -->
-    <section class="welcome-post-sliders owl-carousel">
+    <!-- Horizontal line to separate the slider from the content below, color set to black -->
+<!-- Red bar -->
+    <div class="widget-title">
+        <h6></h6>
+    </div>
 
-        <!-- Single Slide -->
-        <div class="welcome-single-slide">
-            <!-- Post Thumb -->
-            <img src="img/research-img/EarlyVisual.jpg" alt="">
-            <!-- Overlay Text -->
-            <div class="project_title">
-                <a href="pdf/elife-26196-v1.pdf">
-                    <h5>A hierarchical, retinotopic proto-organization of the primate visual system at birth. eLife</h5>
-                </a>
+    
+    
+    <div class="desktop-only"
+        <!-- ****** Welcome Post Area Start ****** -->
+        <section class="welcome-post-sliders owl-carousel">
+
+           <!-- Single Slide -->
+            <div class="welcome-single-slide">
+                <!-- Post Thumb -->
+                <img src="img/research-img/NRP.jpg" alt="">
+                <!-- Overlay Text -->
+                <div class="project_title">
+                    <a href="pdf/elife-26196-v1.pdf">
+                        <h5>A domain-relevant framework for the development of face processing. Nature Reviews Psychology</h5>
+                    </a>
+                </div>
             </div>
-        </div>
-
-        <!-- Single Slide -->
-        <div class="welcome-single-slide">
-            <!-- Post Thumb -->
-            <img src="img/research-img/stuart_solo.png" alt="">
-            <!-- Overlay Text -->
-            <div class="project_title">
-                <a href="pdf/Arcaro2020_eLife.pdf">
-                    <h5>The neurons that mistook a hat for a face. eLife</h5>
-                </a>
+            
+            <!-- Single Slide -->
+            <div class="welcome-single-slide">
+                <!-- Post Thumb -->
+                <img src="img/research-img/EarlyVisual.jpg" alt="">
+                <!-- Overlay Text -->
+                <div class="project_title">
+                    <a href="pdf/ScottArcaro_NRP.pdf">
+                        <h5>A hierarchical, retinotopic proto-organization of the primate visual system at birth. eLife</h5>
+                    </a>
+                </div>
             </div>
-        </div>
 
-
-        <!-- Single Slide -->
-        <div class="welcome-single-slide">
-            <!-- Post Thumb -->
-            <img src="img/research-img/EarlySomato.jpg" alt="">
-            <!-- Overlay Text -->
-            <div class="project_title">
-                <a href="pdf/Arcaro2019_PNAS.pdf">
-                    <h5>Body-map proto-organization in newborn macaque. PNAS</h5>
-                </a>
+            <!-- Single Slide -->
+            <div class="welcome-single-slide">
+                <!-- Post Thumb -->
+                <img src="img/research-img/stuart_solo.png" alt="">
+                <!-- Overlay Text -->
+                <div class="project_title">
+                    <a href="pdf/Arcaro2020_eLife.pdf">
+                        <h5>The neurons that mistook a hat for a face. eLife</h5>
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <!-- Single Slide -->
-        <div class="welcome-single-slide">
-            <!-- Post Thumb -->
-            <img src="img/research-img/PulvinarCoupling.jpg" alt="">
-            <!-- Overlay Text -->
-            <div class="project_title">
-                <a href="pdf/Arcaro_et_al-2018-Nature_Communications.pdf">
-                    <h5>Organizing principles of pulvino-cortical functional coupling in humans. Nat. Comm.</h5>
-                </a>
+
+            <!-- Single Slide -->
+            <div class="welcome-single-slide">
+                <!-- Post Thumb -->
+                <img src="img/research-img/EarlySomato.jpg" alt="">
+                <!-- Overlay Text -->
+                <div class="project_title">
+                    <a href="pdf/Arcaro2019_PNAS.pdf">
+                        <h5>Body-map proto-organization in newborn macaque. PNAS</h5>
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <!-- Single Slide -->
-        <div class="welcome-single-slide">
-            <!-- Post Thumb -->
-            <img src="img/research-img/NoFace.jpg" alt="">
-            <!-- Overlay Text -->
-            <div class="project_title">
-                <a href="pdf/nn.4635.pdf">
-                    <h5>Seeing faces is necessary for face-domain formation. Nat. Neuro.</h5>
-                </a>
+            <!-- Single Slide -->
+            <div class="welcome-single-slide">
+                <!-- Post Thumb -->
+                <img src="img/research-img/PulvinarCoupling.jpg" alt="">
+                <!-- Overlay Text -->
+                <div class="project_title">
+                    <a href="pdf/Arcaro_et_al-2018-Nature_Communications.pdf">
+                        <h5>Organizing principles of pulvino-cortical functional coupling in humans. Nat. Comm.</h5>
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <!-- Single Slide -->
-        <div class="welcome-single-slide">
-            <!-- Post Thumb -->
-            <img src="img/research-img/MC.jpg" alt="">
-            <!-- Overlay Text -->
-            <div class="project_title">
-                <a href="pdf/MC.pdf">
-                    <h5>Psychophysical and neuroimaging responses to moving stimuli in a patient with the Riddoch phenomenon due to bilateral visual cortex lesions. Neuropsychologia.</h5>
-                </a>
+            <!-- Single Slide -->
+            <div class="welcome-single-slide">
+                <!-- Post Thumb -->
+                <img src="img/research-img/NoFace.jpg" alt="">
+                <!-- Overlay Text -->
+                <div class="project_title">
+                    <a href="pdf/nn.4635.pdf">
+                        <h5>Seeing faces is necessary for face-domain formation. Nat. Neuro.</h5>
+                    </a>
+                </div>
             </div>
-        </div>
 
-    </section>
+            <!-- Single Slide -->
+            <div class="welcome-single-slide">
+                <!-- Post Thumb -->
+                <img src="img/research-img/MC.jpg" alt="">
+                <!-- Overlay Text -->
+                <div class="project_title">
+                    <a href="pdf/MC.pdf">
+                        <h5>Psychophysical and neuroimaging responses to moving stimuli in a patient with the Riddoch phenomenon due to bilateral visual cortex lesions. Neuropsychologia.</h5>
+                    </a>
+                </div>
+            </div>
 
-</div>
+        </section>
+
+    </div>
     <!-- ****** Welcome Area End ****** -->
 
 
+<!-- Red bar -->
+    <div class="widget-title">
+        <h6></h6>
+    </div>
 
-<hr style="height:15pt; visibility:hidden;" />
-<p style="font-size:22px; text-align:center;"><b>How does our environment guide neural development, and how does the emerging neural architecture support perception and behavior? </b></p>
 
-
-<p style="font-size:22px; text-align:center;">Our research combines neuroimaging, behavior, and electrophysiology to understand how intrinsic and experience-driven processes interact throughout development to shape brain organization and behavior. Our current focus is on neural development supporting visual object recognition across mammalian species.</p>
-
+   <!-- Main content and scrolling text container wrapped in a flex container -->
+    <div class="content-container" style="display: flex;">
+        <!-- Main content area -->
+        <div class="main-content-area" style="flex: 1;">
     
-<hr style="height:15pt; visibility:hidden;" />
-<hr/>   
-<hr style="height:15pt; visibility:hidden;" />
+            <p style="font-size:28px; text-align:center;"><b>How does our environment guide neural development, and how does the emerging neural architecture support perception and behavior? </b></p>
 
-    <p style="font-size:22px; text-align:center;"> We are thrilled to be part of the Thalamus Conte Center aimed at understanding on the role of higher order thalamus on cognition. <A HREF="https://conte.thalamus.princeton.edu/"> Check out the project and all the fantastic research groups involved!</A></p>
+
+            <p style="font-size:22px; text-align:center;">Our research combines neuroimaging, behavior, and electrophysiology to understand how intrinsic and experience-driven processes interact throughout development to shape brain organization and behavior. Our current focus is on neural development supporting visual object recognition across mammalian species.</p>
+
+
+            <hr style="height:15pt; visibility:hidden;" />
+            <hr/>   
+            <hr style="height:15pt; visibility:hidden;" />
+
+             <p style="font-size:22px; text-align:center;"> The lab is part of the Thalamus Conte Center aimed at advancing our understanding on the role of higher order thalamus on cognition. </p>
+            <p style="font-size:22px; text-align:center;"> <A HREF="https://conte.thalamus.princeton.edu/"> Check out the project and  the fantastic group of investigators involved!</A></p>
+
+            <hr style="height:15pt; visibility:hidden;" />
+            <hr/>   
+            <hr style="height:15pt; visibility:hidden;" />   
+
+                <p style="font-size:22px; text-align:center;"> We're looking to hire a postdoc to work on projects tracking behavioral and neural (structural + functional) changes across development in tree shrews, macaques, and humans. E-mail <A HREF="mailto: marcaro@sas.upenn.edu"> Mike</A> if interested.</p>   
+        </div>
+        
+        <!-- Vertical line to separate the right column, color set to black -->
+        <div style="width: 2px; background-color: black; margin-left: 20px; margin-right: 20px;"></div>
+
+        
+     <!-- Right-side column for Lab News with auto-scroll -->
+        <div class="right-side-column" style="width: 25%; height: 600px; padding-left: 20px;">
+            <h2 style="">Lab News</h2>
+            <!-- Auto-scrolling container for Lab News sections -->
+            <div id="auto-scroll-container" style="height: 100%; overflow: hidden; position: relative;">
+                <div id="scroll-content">
+                    <!-- Scrollable content, duplicated for a seamless loop -->
+                    <section style="margin-bottom: 25px;">
+                    </section>    
+                    <section style="margin-bottom: 25px;">
+                        <p>Jan 2024. <A HREF="https://www.annualreviews.org/doi/abs/10.1146/annurev-neuro-082823-073701?journalCode=neuro">New paper in Annual Reviews Neuroscience!</A></p>
+                    </section>
+                    <section style="margin-bottom: 25px;">
+                        <p>Jan 2024. The lab has received a <A HREF="http://whitehall.org/about/">Whitehall Foundation</A> grant to study neuroanatomical constraints on the development of visual domains. </p>
+                    </section>
+                    <section style="margin-bottom: 25px;">
+                        <p>Oct 2023. The lab welcomes our new postdoc, Xingyu Liu!</p>
+                    </section>
+                    <!-- Repeat the content for the loop -->
+                    <section style="margin-bottom: 25px;">
+                        <p>Oct 2023. The lab welcomes our new postdoc, Vlad Ayzenberg!</p>
+                    </section>
+                    <section style="margin-bottom: 25px;">
+                        <p>April 2023. The lab is thrilled to be part of the <A HREF="https://conte.thalamus.princeton.edu/">Thalamus Conte Center</A> where we will study thalamocortical cognitive networks in the healthy human brain. </p>
+                    </section>
+                     <section style="margin-bottom: 25px;">
+                        <p>Feb 2023. <A HREF="https://www.nature.com/articles/s44159-023-00152-5">New paper in Nature Reviews Psychology!</A></p>
+                    </section>                   
+                </div>
+            </div>
+        </div>
+        
+    </div>
     
-<hr style="height:15pt; visibility:hidden;" />
-<hr/>   
-<hr style="height:15pt; visibility:hidden;" />   
+    
+            <!-- ****** Footer Menu Area Start ****** -->
+            <footer class="footer_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="footer-content">
+                                <!-- Logo Area Start -->
+                                <div class="footer-logo-area text-center">
+                                    <img src="img/core-img/pennlogo.jpg" alt="PennLogo" style="width:10%;height:10%;">
+                                </div>
+                                <p class="font_8" style="font-size:12px; text-align:center;"><span style="text-decoration:underline;"><a href="https://www.upenn.edu/" target="_blank" data-content="https://www.upenn.edu/" data-type="external" rel="undefined"><span style="font-size:16px;">University of Pennsylvania</span></a></span></p>
+                                <p class="font_8" style="font-size:12px; text-align:center; line-height:1.1em;"><span style="text-decoration:underline;"><a href="https://psychology.sas.upenn.edu/" target="_blank" data-content="https://psychology.sas.upenn.edu/" data-type="external" rel="undefined"><span style="font-size:16px;">Department of Psychology</span></a></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
 
-    <p style="font-size:22px; text-align:center;"> We're looking to hire a postdoc to work on projects tracking behavioral and neural (structural + functional) changes across development in tree shrews, macaques, and humans. E-mail <A HREF="mailto: marcaro@sas.upenn.edu"> Mike</A> if interested.</p>
+    <!-- Script for auto-scrolling -->
+    <script>
+        const scrollContainer = document.getElementById('auto-scroll-container');
+        const scrollContent = document.getElementById('scroll-content').innerHTML;  // Grab the original content
+        scrollContainer.innerHTML += scrollContainer.innerHTML;  // Duplicate the content for scrolling
 
-	<!-- ****** Footer Menu Area Start ****** -->
-	<footer class="footer_area">
-	    <div class="container">
-	        <div class="row">
-	            <div class="col-12">
-	                <div class="footer-content">
-	                    <!-- Logo Area Start -->
-	                    <div class="footer-logo-area text-center">
-							<img src="img/core-img/pennlogo.jpg" alt="PennLogo" style="width:10%;height:10%;">
-	                    </div>
-						<p class="font_8" style="font-size:12px; text-align:center;"><span style="text-decoration:underline;"><a href="https://www.upenn.edu/" target="_blank" data-content="https://www.upenn.edu/" data-type="external" rel="undefined"><span style="font-size:16px;">University of Pennsylvania</span></a></span></p>
-						<p class="font_8" style="font-size:12px; text-align:center; line-height:1.1em;"><span style="text-decoration:underline;"><a href="https://psychology.sas.upenn.edu/" target="_blank" data-content="https://psychology.sas.upenn.edu/" data-type="external" rel="undefined"><span style="font-size:16px;">Department of Psychology</span></a></span></p>
-					</div>
-		        </div>
-		    </div>
-		</div>
-	</footer>
+        let startPos = 0;
+        const speed = .25;  // Adjust the speed as needed
 
-<!-- Default Statcounter code for Arcarolab.org
-http://arcarolab.org -->
-<script type="text/javascript">
-var sc_project=12071376;
-var sc_invisible=1;
-var sc_security="6b66c1d2";
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="https://c.statcounter.com/12071376/0/6b66c1d2/1/"
-alt="Web Analytics"></a></div></noscript>
-<!-- End of Statcounter Code -->
+        function autoScroll() {
+            if (startPos >= scrollContainer.scrollHeight / 2) {
+                startPos = 0;  // Reset to top when halfway through the content
+            }
+            startPos += speed;
+            scrollContainer.scrollTop = startPos;
+            window.requestAnimationFrame(autoScroll);
+        }
 
-
-
-
-    <!-- Jquery-2.2.4 js -->
+        autoScroll();  // Initialize auto-scrolling
+    </script>
+    
+    
+    <!-- Script Tags Including jQuery, Popper, Bootstrap, and Other Plugins -->
+    <script src="js/script.js"></script>
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
     <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap-4 js -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins JS -->
     <script src="js/others/plugins.js"></script>
-    <!-- Active JS -->
     <script src="js/active.js"></script>
-</body>
+
+</html>
