@@ -1,20 +1,18 @@
-<script>
-    function startAutoScroll() {
-        const container = document.getElementById('scrollingContent'); // Corrected the ID reference
-        let scrollAmount = 0;
+// Auto-scroll functionality
+const scrollContainer = document.getElementById('auto-scroll-container');
+const scrollContent = document.getElementById('scroll-content').innerHTML;
+scrollContainer.innerHTML += scrollContent;
 
-        function scrollContent() {
-            scrollAmount += 1; // Increment the scroll position
-            container.scrollTop = scrollAmount; // Apply the scroll to the container
+let startPos = 0;
+const speed = 0.25;
 
-            if (scrollAmount >= container.scrollHeight / 2) {
-                scrollAmount = 0; // Reset scroll position if it reaches half of the scroll height
-                container.scrollTop = 0; // Reset the scrollTop position to 0
-            }
-        }
-
-        setInterval(scrollContent, 50); // Set the interval for the scroll movement, adjust the interval time as needed
+function autoScroll() {
+    if (startPos >= scrollContainer.scrollHeight / 2) {
+        startPos = 0;
     }
+    startPos += speed;
+    scrollContainer.scrollTop = startPos;
+    window.requestAnimationFrame(autoScroll);
+}
 
-    document.addEventListener('DOMContentLoaded', startAutoScroll); // Start scrolling after the DOM is fully loaded
-</script>
+autoScroll();
