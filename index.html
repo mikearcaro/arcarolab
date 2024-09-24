@@ -111,6 +111,16 @@
             text-transform: uppercase;
             font-size: 44px;
         }
+        
+        .transmission-lines {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .transmission-lines .line {
+            height: 2px;
+            background-color: black;
+            margin: 5px auto; /* Centers the lines */
+        }
     </style>
 </head>
 
@@ -120,9 +130,9 @@
 
     <!-- Preloader Start -->
     <div id="preloader">
-        <div class="yummy-load"></div>
+        <img src="img/core-img/background0.png" alt="Loading..." class="loading-image" id="image1">
+        <img src="img/core-img/background1.png" alt="Loading..." class="loading-image" id="image2">
     </div>
-
 
         <!-- ****** Header Area Start ****** -->
     <header class="header_area">
@@ -170,6 +180,17 @@
         <section class="welcome-post-sliders owl-carousel">
 
            <!-- Single Slide -->
+            <div class="welcome-single-slide">
+                <!-- Post Thumb -->
+                <img src="img/research-img/histology.jpg" alt="">
+                <!-- Overlay Text -->
+                <div class="project_title">
+                    <a href="pdf/Oishi_CellReports.pdf">
+                        <h5>Inferotemporal face patches are histo-architectonically distinct. Cell Reports</h5>
+                    </a>
+                </div>
+            </div>
+            
             <div class="welcome-single-slide">
                 <!-- Post Thumb -->
                 <img src="img/research-img/NRP.jpg" alt="">
@@ -303,7 +324,8 @@
                 <div id="scroll-content">
                     <!-- Scrollable content, duplicated for a seamless loop -->
                     <section style="margin-bottom: 25px;">
-                    </section>    
+                        <p>Please stand by ...</p>  
+                    </section>      
                     <section style="margin-bottom: 25px;">
                         <p>Sept 2024. Big congrats to Hiroki on his macaque face patch histology paper. <A HREF="https://www.cell.com/cell-reports/fulltext/S2211-1247(24)01083-0"> Out now in Cell Reports!</A></p>
                     </section>
@@ -325,7 +347,20 @@
                     </section>
                      <section style="margin-bottom: 25px;">
                         <p>Feb 2023. <A HREF="https://www.nature.com/articles/s44159-023-00152-5">New paper in Nature Reviews Psychology!</A></p>
-                    </section>                   
+                    </section>   
+                    <section style="margin-bottom: 25px;">
+                        <p>END OF TRANSMISSION</p>
+                            <div class="transmission-lines">
+                            <div class="line" style="width: 100%;"></div>
+                            <div class="line" style="width: 75%;"></div>
+                            <div class="line" style="width: 56.25%;"></div>
+                            <div class="line" style="width: 42.19%;"></div>
+                            <div class="line" style="width: 31.64%;"></div>
+                        </div>
+                    </section>  
+                    <section style="margin-bottom: 100px;">
+                    
+                    </section>  
                 </div>
             </div>
         </div>

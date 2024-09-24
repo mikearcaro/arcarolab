@@ -274,68 +274,52 @@ li {
     font-family: 'Shadows Into Light Two', cursive !important;
 }
 
-.yummy-table {
-    display: table;
-    height: 100%;
-    left: 0;
-    position: relative;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-}
-
-.yummy-table-cell {
-    display: table-cell;
-    vertical-align: middle;
-}
-
 #preloader {
-    overflow: hidden;
-    background-color: #fff;
-    height: 100%;
-    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    z-index: 999999;
+    height: 100%;
+    background-color: white;
+    z-index: 9999;
 }
 
-.yummy-load {
-    -webkit-animation: 2000ms linear 0s normal none infinite running yummy-load;
-    animation: 2000ms linear 0s normal none infinite running yummy-load;
-    background: transparent none repeat scroll 0 0;
-    border-color: #dddddd #dddddd #fc6c3f;
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 3px;
-    height: 40px;
-    left: calc(50% - 20px);
-    position: relative;
-    top: calc(50% - 20px);
-    width: 40px;
-    z-index: 9;
+.loading-image {
+    position: absolute;
+    width: 5vw; /* Adjust size as needed */
+    height: 5vw; /* Match width and height to create a square */
+    border-radius: 50%; /* Make the image appear circular */
+    animation: rotate 0.5s linear infinite, flicker 0.25s step-start infinite;
+    object-fit: cover; /* Ensure the image covers the circular area without distortion */
 }
 
-@-webkit-keyframes yummy-load {
-    0% {
-        -webkit-transform: rotate(0deg);
+/* Rotation animation */
+@keyframes rotate {
+    from {
         transform: rotate(0deg);
     }
-    100% {
-        -webkit-transform: rotate(360deg);
+    to {
         transform: rotate(360deg);
     }
 }
 
-@keyframes yummy-load {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
+/* Flicker animation for alternating visibility */
+@keyframes flicker {
+    0%, 100% {
+        opacity: 1;
     }
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
+    50% {
+        opacity: 0;
     }
+}
+
+/* Delay the flicker for the second image so they alternate */
+#image2 {
+    animation: rotate 0.5s linear infinite, flicker 0.25s step-start infinite;
+    animation-delay: 0.125s; /* Half the flicker time to alternate the images */
 }
 
 
