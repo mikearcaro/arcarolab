@@ -116,7 +116,18 @@
 .right-column {
     text-align: right;
 }
-    
+
+.grad-row {
+  display: flex;
+  justify-content: center;
+  gap: 15%; /* spacing scales with container width */
+  flex-wrap: wrap; /* allows them to stack if the screen is too narrow */
+}
+
+.grad-row .members_column {
+  width: 35%; /* each student card takes ~a third of the row */
+  text-align: center;
+}
     
 </style>
 
@@ -217,14 +228,13 @@
     
 </div>
     
-<div class="row">
-    
+<div class="row grad-row">
     <div class="members_column">
         <div class="about-me-widget-thumb">
             <img src="img/people-img/DianaKing.jpg" alt="" style="width: 60%; height: 60%;">
         </div>
         <h4>Diana King</h4>
-        <h7>Gradudate Student</h7>
+        <h7>Graduate Student</h7>
         <div class="single-icon">
             <a href="pdf/labfiles/Diana_CV.pdf"><img src="img/links-img/cv.jpg" style="width:8%;height:8%;"></a>
         </div>
@@ -235,22 +245,20 @@
             <img src="img/people-img/MeyerE.jpg" alt="" style="width: 60%; height: 60%;">
         </div>
         <h4>Emily Meyer</h4>
-        <h7>Gradudate Student</h7>
+        <h7>Graduate Student</h7>
         <div class="single-icon">
             <a href="https://bsky.app/profile/emilymeyer.bsky.social"><img src="img/links-img/blueskyicon.svg" style="width:8%;height:8%;"></a>
         </div>
     </div>
-
 </div>
-    
-<div class="row">
-    
+
+<div class="row grad-row">
     <div class="members_column">
         <div class="about-me-widget-thumb">
             <img src="img/people-img/Monami.jpg" alt="" style="width: 60%; height: 60%;">
         </div>
-        <h4>Monami Nishio </h4>
-        <h7>Gradudate Student </h7> 
+        <h4>Monami Nishio</h4>
+        <h7>Graduate Student</h7> 
         <h7>co-advised with Dr. Allyson Mackey</h7>
         <div class="single-icon">
             <a href="pdf/labfiles/20250828CV_MonamiNishio.pdf"><img src="img/links-img/cv.jpg" style="width:8%;height:8%;"></a>
@@ -261,13 +269,9 @@
         <div class="about-me-widget-thumb">
             <img src="img/people-img/rainbowbrain.png" alt="" style="width: 60%; height: 60%;">
         </div>
-        <h4>Reyansh Sathishkumar </h4>
-        <h7>Gradudate Student</h7>
-
+        <h4>Reyansh Sathishkumar</h4>
+        <h7>Graduate Student</h7>
     </div>
-    
-
-    
 </div>
 
 
