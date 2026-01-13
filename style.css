@@ -1473,8 +1473,8 @@ li {
     display: table;
     color: #7D2A35;
     padding-top: 10px;
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 24px;
 }
 
 /* Horizontal rule styling */
@@ -2161,7 +2161,7 @@ hr {
     }
 
     .contentsmallheader {
-        font-size: 17px;
+        font-size: 20px;
     }
 
     .pub-list li {
@@ -2176,7 +2176,7 @@ hr {
     }
 
     .contentsmallheader {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .pub-list li {
