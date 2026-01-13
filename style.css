@@ -2291,8 +2291,10 @@ hr {
     display: block;
     width: 30%;
     height: auto;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 15px 0;
+    text-align: center;
 }
 
 .content-divider {

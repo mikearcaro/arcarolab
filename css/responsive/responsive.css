@@ -231,9 +231,12 @@
     /* Ensure logo above header is visible and sized for mobile */
     .index-logo,
     .subpage-logo {
-        display: block;
-        width: 60%;
-        margin: 10px auto;
+        display: block !important;
+        width: 50% !important;
+        max-width: 250px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 10px 0;
     }
 
     /* Reset problematic percentage margins */
