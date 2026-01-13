@@ -222,3 +222,76 @@
         margin-left: 130px;
     }
 }
+
+/* ===========================================
+   Touch Device Specific Styles
+   Targets actual mobile phones and tablets
+   =========================================== */
+@media (hover: none) and (pointer: coarse) {
+    /* Reset problematic percentage margins */
+    .navbar.navbar-expand-lg {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 15px;
+    }
+
+    /* Clean mobile menu button */
+    .navbar-toggler {
+        background-color: #a73437;
+        width: 100%;
+        color: #fff;
+        padding: 12px 20px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    /* Hide logo in nav on mobile to save space */
+    .navbar.navbar-expand-lg .navbar-nav .nav-logo {
+        display: none;
+    }
+
+    /* Clean vertical menu items */
+    .navbar.navbar-expand-lg .navbar-nav {
+        width: 100%;
+        text-align: center;
+        background-color: #f8f8f8;
+        padding: 10px 0;
+        border-radius: 4px;
+    }
+
+    .navbar.navbar-expand-lg .navbar-nav .nav-item {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    .navbar.navbar-expand-lg .navbar-nav .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    /* Clean nav links without overlap */
+    .navbar.navbar-expand-lg .navbar-nav .nav-link {
+        display: block;
+        padding: 15px 20px;
+        margin: 0;
+        color: #373f6d;
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 1.4;
+        text-decoration: none;
+    }
+
+    .navbar.navbar-expand-lg .navbar-nav .nav-link:hover,
+    .navbar.navbar-expand-lg .navbar-nav .nav-link:active {
+        background-color: #a73437;
+        color: #fff;
+    }
+
+    /* Ensure spacer items don't display */
+    .navbar.navbar-expand-lg .navbar-nav .nav-item:empty,
+    .navbar.navbar-expand-lg .navbar-nav .nav-item:has(> :only-child:empty) {
+        display: none;
+    }
+}
