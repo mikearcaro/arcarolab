@@ -2297,9 +2297,7 @@ hr {
 
 /* Pull header up to reduce gap after logo - desktop only */
 @media (min-width: 992px) {
-    .index-logo + #preloader + .header_area,
-    .subpage-logo + .header_area,
-    .index-logo + .header_area {
+    .header_area {
         margin-top: -20px;
     }
 }
