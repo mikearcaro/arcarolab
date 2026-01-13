@@ -20,113 +20,11 @@
     <!-- Responsive CSS -->
     <link href="css/responsive/responsive.css" rel="stylesheet">
 
-    <style>
-        @media (min-width: 992px) {
-            body {
-                padding-top: 20px;
-                padding-left: 120px;
-                padding-right: 120px;
-                font-size: 32px;
-                margin: 0px;
-            }
-
-            .right-side-column {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-
-        @media (max-width: 991px) {
-            body {
-                padding-top: 5px;
-                padding-left: 20px;
-                padding-right: 20px;
-                font-size: 20px;
-                margin: 0px;
-            }
-
-            .right-side-column {
-                display: none;
-            }
-
-            .content-container {
-                flex-direction: column;
-            }
-
-            .main-content-area {
-                max-width: 100%;
-                margin-right: 0;
-                /* Remove right margin to take full width */
-            }
-
-            .vertical-line {
-                display: none;
-            }
-        }
-
-        hr {
-            height: 2pt;
-            background-color: grey;
-            border: none;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .content-container {
-            display: flex;
-            flex-wrap: wrap;
-            margin-right: -15px;
-            margin-left: -15px;
-        }
-
-        .main-content-area {
-            flex: 1;
-            /* Adjust this to change the main content width */
-            max-width: 100%;
-            /* Adjust this to control the width of the main content area */
-        }
-
-        .right-side-column h2 {
-            font-size: 40px;
-            /* Larger font size for the header */
-            margin-bottom: 30px;
-        }
-
-        .right-side-column section p {
-            font-size: 20px;
-            /* Larger font size for the paragraph text */
-        }
-
-        /* Adjust height to match the main content area */
-        .right-side-column>div {
-            flex: 1;
-        }
-
-        .navbar.navbar-expand-lg .navbar-nav .nav-link {
-            padding: 10px 50px;
-            margin-left: -5%;
-            margin-right: -5%;
-            margin-bottom: 0%;
-            color: #373f6d;
-            text-transform: uppercase;
-            font-size: 44px;
-        }
-        
-        .transmission-lines {
-            margin-top: 10px;
-            text-align: center;
-        }
-        .transmission-lines .line {
-            height: 2px;
-            background-color: black;
-            margin: 5px auto; /* Centers the lines */
-        }
-    </style>
 </head>
 
 <body>
-  
-    <img src="img/core-img/arcarolab_single.gif" width="30%" height="30%">
+
+    <img src="img/core-img/arcarolab_single.gif" alt="Arcaro Lab logo animation" class="index-logo">
 
     <!-- Preloader Start -->
     <div id="preloader">
@@ -134,7 +32,7 @@
         <img src="img/core-img/background1.png" alt="Loading..." class="loading-image" id="image2">
     </div>
 
-        <!-- ****** Header Area Start ****** -->
+    <!-- ****** Header Area Start ****** -->
     <header class="header_area">
         <div class="container">
             <div class="row">
@@ -173,28 +71,25 @@
         <h6></h6>
     </div>
 
-    
-    
-    <div class="desktop-only"
+    <div class="desktop-only">
         <!-- ****** Welcome Post Area Start ****** -->
         <section class="welcome-post-sliders owl-carousel">
 
-           <!-- Single Slide -->
-
+            <!-- Single Slide -->
             <div class="welcome-single-slide">
                 <!-- Post Thumb -->
-                <img src="img/research-img/pulvinarscenes.png" alt="">
+                <img src="img/research-img/pulvinarscenes.png" alt="Natural scene processing in human pulvinar">
                 <!-- Overlay Text -->
                 <div class="project_title">
                     <a href="https://www.nature.com/articles/s41467-025-67472-3">
                         <h5>Processing of natural scenes in the human pulvinar. <br><br>Nature Communications</h5>
                     </a>
                 </div>
-            </div>            
-            
+            </div>
+
             <div class="welcome-single-slide">
                 <!-- Post Thumb -->
-                <img src="img/research-img/monami_fig.png" alt="">
+                <img src="img/research-img/monami_fig.png" alt="Cortical maturation in macaques and humans">
                 <!-- Overlay Text -->
                 <div class="project_title">
                     <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003378">
@@ -202,10 +97,10 @@
                     </a>
                 </div>
             </div>
-    
+
             <div class="welcome-single-slide">
                 <!-- Post Thumb -->
-                <img src="img/research-img/visexpansion.png" alt="">
+                <img src="img/research-img/visexpansion.png" alt="Evolution of primate visual cortex">
                 <!-- Overlay Text -->
                 <div class="project_title">
                     <a href="https://www.pnas.org/doi/10.1073/pnas.2421585122">
@@ -213,10 +108,10 @@
                     </a>
                 </div>
             </div>
-            
+
             <div class="welcome-single-slide">
                 <!-- Post Thumb -->
-                <img src="img/research-img/neonatepulvinar.jpg" alt="">
+                <img src="img/research-img/neonatepulvinar.jpg" alt="Human neonate pulvinar connectivity">
                 <!-- Overlay Text -->
                 <div class="project_title">
                     <a href="https://www.cell.com/current-biology/abstract/S0960-9822(24)01583-5">
@@ -224,56 +119,65 @@
                     </a>
                 </div>
             </div>
-            
+
             <div class="welcome-single-slide">
                 <!-- Post Thumb -->
-                <img src="img/research-img/histology.jpg" alt="">
+                <img src="img/research-img/histology.jpg" alt="Macaque face patch histology">
                 <!-- Overlay Text -->
                 <div class="project_title">
-                    <a href="pdf/Oishi_CellReports.pdf">
+                    <a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(24)01083-0">
                         <h5>Inferotemporal face patches are histo-architectonically distinct. <br><br>Cell Reports</h5>
                     </a>
                 </div>
             </div>
-            
+
             <div class="welcome-single-slide">
                 <!-- Post Thumb -->
-                <img src="img/research-img/topographic.png" alt="">
+                <img src="img/research-img/topographic.png" alt="Whole-brain topographic ontology">
                 <!-- Overlay Text -->
                 <div class="project_title">
-                    <a href="pdf/Oishi_CellReports.pdf">
+                    <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-neuro-082823-073701">
                         <h5>A whole-brain topographic ontology. <br><br>Annual Reviews Neuroscience</h5>
                     </a>
                 </div>
             </div>
-            
+
             <div class="welcome-single-slide">
                 <!-- Post Thumb -->
-                <img src="img/research-img/NRP.jpg" alt="">
+                <img src="img/research-img/NRP.jpg" alt="Face processing development framework">
                 <!-- Overlay Text -->
                 <div class="project_title">
-                    <a href="pdf/elife-26196-v1.pdf">
+                    <a href="https://www.nature.com/articles/s44159-023-00152-5">
                         <h5>A domain-relevant framework for the development of face processing. <br><br>Nature Reviews Psychology</h5>
                     </a>
                 </div>
             </div>
 
-
             <!-- Single Slide -->
             <div class="welcome-single-slide">
                 <!-- Post Thumb -->
-                <img src="img/research-img/stuart_solo.png" alt="">
+                <img src="img/research-img/stuart_solo.png" alt="Face neurons research illustration">
                 <!-- Overlay Text -->
                 <div class="project_title">
-                    <a href="pdf/Arcaro2020_eLife.pdf">
+                    <a href="https://elifesciences.org/articles/53798">
                         <h5>The neurons that mistook a hat for a face. <br><br>eLife</h5>
                     </a>
                 </div>
             </div>
 
-
         </section>
 
+    </div>
+    <!-- ****** Mobile Featured Publications ****** -->
+    <div class="mobile-only mobile-featured">
+        <h3>Featured Publications</h3>
+        <ul class="mobile-pub-list">
+            <li><a href="https://www.nature.com/articles/s41467-025-67472-3">Processing of natural scenes in the human pulvinar - <em>Nature Communications</em></a></li>
+            <li><a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003378">Humans have a longer period of cortical maturation across depth and hierarchy than macaques - <em>PLOS Biology</em></a></li>
+            <li><a href="https://www.pnas.org/doi/10.1073/pnas.2421585122">Expansion of a conserved architecture drives the evolution of primate visual cortex - <em>PNAS</em></a></li>
+            <li><a href="https://www.cell.com/current-biology/abstract/S0960-9822(24)01583-5">An intrinsic hierarchical, retinotopic organization of visual pulvinar connectivity in the human neonate - <em>Current Biology</em></a></li>
+            <li><a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(24)01083-0">Inferotemporal face patches are histo-architectonically distinct - <em>Cell Reports</em></a></li>
+        </ul>
     </div>
     <!-- ****** Welcome Area End ****** -->
 
@@ -284,100 +188,89 @@
     </div>
 
 
-   <!-- Main content and scrolling text container wrapped in a flex container -->
-    <div class="content-container" style="display: flex;">
+    <!-- Main content and scrolling text container wrapped in a flex container -->
+    <div class="content-container">
         <!-- Main content area -->
-        <div class="main-content-area" style="flex: 1;">
-    
-            <p style="font-size:28px; text-align:center;"><b>How does our environment guide neural development, and how does the emerging neural architecture support perception and behavior? </b></p>
+        <div class="main-content-area">
 
+            <p class="hero-text"><b>How does our environment guide neural development, and how does the emerging neural architecture support perception and behavior?</b></p>
 
-            <p style="font-size:22px; text-align:center;">Our research combines neuroimaging, behavior, and electrophysiology to understand how intrinsic and experience-driven processes interact throughout development to shape brain organization and behavior. Our current focus is on neural development supporting visual object recognition across mammalian species.</p>
+            <p class="body-text">Our research combines neuroimaging, behavior, and electrophysiology to understand how intrinsic and experience-driven processes interact throughout development to shape brain organization and behavior. Our current focus is on neural development supporting visual object recognition across mammalian species.</p>
 
+            <div class="content-divider"></div>
 
-            <hr style="height:15pt; visibility:hidden;" />
-            <hr/>   
-            <hr style="height:15pt; visibility:hidden;" />
+            <p class="body-text">The lab is part of the Thalamus Conte Center aimed at advancing our understanding on the role of higher order thalamus on cognition.</p>
+            <p class="body-text"><a href="https://conte.thalamus.princeton.edu/">Check out the project and the fantastic group of investigators involved!</a></p>
 
-             <p style="font-size:22px; text-align:center;"> The lab is part of the Thalamus Conte Center aimed at advancing our understanding on the role of higher order thalamus on cognition. </p>
-            <p style="font-size:22px; text-align:center;"> <A HREF="https://conte.thalamus.princeton.edu/"> Check out the project and  the fantastic group of investigators involved!</A></p>
+            <div class="content-divider"></div>
 
-            <hr style="height:15pt; visibility:hidden;" />
-            <hr/>   
-            <hr style="height:15pt; visibility:hidden;" />   
-
-             <!--    <p style="font-size:22px; text-align:center;"> We're looking to hire a postdoc to work on projects tracking behavioral and neural (structural + functional) changes across development in tree shrews, macaques, and humans. E-mail <A HREF="mailto: marcaro@sas.upenn.edu"> Mike</A> if interested.</p>   -->
         </div>
-        
-   <!-- Vertical line to separate the right column -->
-        <div style="width: 2px; background-color: black; margin-left: 20px; margin-right: 20px;"></div>
 
-        
-  <!-- Right-side column for Lab News with auto-scroll -->
-        <div class="right-side-column" style="width: 25%; height: 600px; padding-left: 20px;">
-            <h2 style="">Lab News</h2>
+        <!-- Vertical line to separate the right column -->
+        <div class="vertical-separator"></div>
+
+        <!-- Right-side column for Lab News with auto-scroll -->
+        <div class="right-side-column">
+            <h2>Lab News</h2>
             <!-- Auto-scrolling container for Lab News sections -->
-            <div id="auto-scroll-container" style="height: 100%; overflow: hidden; position: relative;">
+            <div id="auto-scroll-container">
                 <div id="scroll-content">
                     <!-- Scrollable content, duplicated for a seamless loop -->
-                    <section style="margin-bottom: 25px;">
-                        <p>Please stand by ...</p>  
-                    </section>    
-                    <section style="margin-bottom: 25px;">
-                        <p>Dec 2025. Big congrats to Danny on his paper on natural scene processing in the human pulvinar. <A HREF="https://www.nature.com/articles/s41467-025-67472-3"> Out now in Nature Communications!</A></p>
-                   </section>   
-                    <section style="margin-bottom: 25px;">
-                        <p>Sept 2025. Big congrats to Monami on her paper mapping inside-out development of myelination in macaques and humans. <A HREF="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003378"> Out now in PLOS Biology!</A></p>
-                   </section>   
-                   <section style="margin-bottom: 25px;">
-                        <p>Jan 2025. Big congrats to Emily on her paper assessing the evolution of primate visual cortex. <A HREF="https://www.pnas.org/doi/10.1073/pnas.2421585122"> Out now in PNAS!</A></p>
+                    <section class="news-item">
+                        <p>Please stand by ...</p>
                     </section>
-                    <section style="margin-bottom: 25px;">
-                        <p>Dec 2024. Big congrats to Vlad on his paper mapping the human neonate pulvinar. <A HREF="https://www.cell.com/current-biology/abstract/S0960-9822(24)01583-5"> Out now in Current Biology!</A></p>
-                    </section>                    
-                    <section style="margin-bottom: 25px;">
-                        <p>Sept 2024. Big congrats to Hiroki on his macaque face patch histology paper. <A HREF="https://www.cell.com/cell-reports/fulltext/S2211-1247(24)01083-0"> Out now in Cell Reports!</A></p>
+                    <section class="news-item">
+                        <p>Dec 2025. Big congrats to Danny on his paper on natural scene processing in the human pulvinar. <a href="https://www.nature.com/articles/s41467-025-67472-3">Out now in Nature Communications!</a></p>
                     </section>
-                    <section style="margin-bottom: 25px;">
-                        <p>Jan 2024. Perspective piece on the universality of topographic brain maps. <A HREF="https://www.annualreviews.org/doi/abs/10.1146/annurev-neuro-082823-073701?journalCode=neuro"> Out now in Annual Reviews Neuroscience!</A></p>
+                    <section class="news-item">
+                        <p>Sept 2025. Big congrats to Monami on her paper mapping inside-out development of myelination in macaques and humans. <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003378">Out now in PLOS Biology!</a></p>
                     </section>
-                    <section style="margin-bottom: 25px;">
-                        <p>Jan 2024. The lab has received a <A HREF="http://whitehall.org/about/">Whitehall Foundation</A> grant to study neuroanatomical constraints on the development of visual domains. </p>
+                    <section class="news-item">
+                        <p>Jan 2025. Big congrats to Emily on her paper assessing the evolution of primate visual cortex. <a href="https://www.pnas.org/doi/10.1073/pnas.2421585122">Out now in PNAS!</a></p>
                     </section>
-                    <section style="margin-bottom: 25px;">
+                    <section class="news-item">
+                        <p>Dec 2024. Big congrats to Vlad on his paper mapping the human neonate pulvinar. <a href="https://www.cell.com/current-biology/abstract/S0960-9822(24)01583-5">Out now in Current Biology!</a></p>
+                    </section>
+                    <section class="news-item">
+                        <p>Sept 2024. Big congrats to Hiroki on his macaque face patch histology paper. <a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(24)01083-0">Out now in Cell Reports!</a></p>
+                    </section>
+                    <section class="news-item">
+                        <p>Jan 2024. Perspective piece on the universality of topographic brain maps. <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-neuro-082823-073701?journalCode=neuro">Out now in Annual Reviews Neuroscience!</a></p>
+                    </section>
+                    <section class="news-item">
+                        <p>Jan 2024. The lab has received a <a href="http://whitehall.org/about/">Whitehall Foundation</a> grant to study neuroanatomical constraints on the development of visual domains.</p>
+                    </section>
+                    <section class="news-item">
                         <p>Oct 2023. The lab welcomes our new postdoc, Xingyu Liu!</p>
                     </section>
                     <!-- Repeat the content for the loop -->
-                    <section style="margin-bottom: 25px;">
+                    <section class="news-item">
                         <p>Oct 2023. The lab welcomes our new postdoc, Vlad Ayzenberg!</p>
                     </section>
-                    <section style="margin-bottom: 25px;">
-                        <p>April 2023. The lab is thrilled to be part of the <A HREF="https://conte.thalamus.princeton.edu/">Thalamus Conte Center</A> where we will study thalamocortical cognitive networks in the healthy human brain. </p>
+                    <section class="news-item">
+                        <p>April 2023. The lab is thrilled to be part of the <a href="https://conte.thalamus.princeton.edu/">Thalamus Conte Center</a> where we will study thalamocortical cognitive networks in the healthy human brain.</p>
                     </section>
-                     <section style="margin-bottom: 25px;">
-                        <p>Feb 2023. <A HREF="https://www.nature.com/articles/s44159-023-00152-5">New paper in Nature Reviews Psychology!</A></p>
-                    </section>   
-                    <section style="margin-bottom: 25px;">
+                    <section class="news-item">
+                        <p>Feb 2023. <a href="https://www.nature.com/articles/s44159-023-00152-5">New paper in Nature Reviews Psychology!</a></p>
+                    </section>
+                    <section class="news-item">
                         <p>END OF TRANSMISSION</p>
-                            <div class="transmission-lines">
-                            <div class="line" style="width: 100%;"></div>
-                            <div class="line" style="width: 75%;"></div>
-                            <div class="line" style="width: 56.25%;"></div>
-                            <div class="line" style="width: 42.19%;"></div>
-                            <div class="line" style="width: 31.64%;"></div>
+                        <div class="transmission-lines">
+                            <div class="line line-100"></div>
+                            <div class="line line-75"></div>
+                            <div class="line line-56"></div>
+                            <div class="line line-42"></div>
+                            <div class="line line-32"></div>
                         </div>
-                    </section>  
-                    <section style="margin-bottom: 100px;">
-                    
-                    </section>  
+                    </section>
                 </div>
             </div>
         </div>
-        
+
     </div>
-    
-    
-   <!-- ****** Footer Menu Area Start ****** -->
+
+
+    <!-- ****** Footer Menu Area Start ****** -->
     <footer class="footer_area">
         <div class="container">
             <div class="row">
@@ -385,10 +278,10 @@
                     <div class="footer-content">
                         <!-- Logo Area Start -->
                         <div class="footer-logo-area text-center">
-                            <img src="img/core-img/pennlogo.jpg" alt="PennLogo" style="width:10%;height:10%;">
+                            <img src="img/core-img/pennlogo.jpg" alt="Penn Logo" class="footer-logo">
                         </div>
-                        <p class="font_8" style="font-size:12px; text-align:center;"><span style="text-decoration:underline;"><a href="https://www.upenn.edu/" target="_blank" data-content="https://www.upenn.edu/" data-type="external" rel="undefined"><span style="font-size:16px;">University of Pennsylvania</span></a></span></p>
-                        <p class="font_8" style="font-size:12px; text-align:center; line-height:1.1em;"><span style="text-decoration:underline;"><a href="https://psychology.sas.upenn.edu/" target="_blank" data-content="https://psychology.sas.upenn.edu/" data-type="external" rel="undefined"><span style="font-size:16px;">Department of Psychology</span></a></span></p>
+                        <p class="footer-link"><a href="https://www.upenn.edu/" target="_blank" rel="noopener noreferrer">University of Pennsylvania</a></p>
+                        <p class="footer-link-dense"><a href="https://psychology.sas.upenn.edu/" target="_blank" rel="noopener noreferrer">Department of Psychology</a></p>
                     </div>
                 </div>
             </div>
@@ -416,16 +309,16 @@
 
         autoScroll();  // Initialize auto-scrolling
     </script>
-    
-    
+
+
     <!-- Script Tags Including jQuery, Popper, Bootstrap, and Other Plugins -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <script src="js/bootstrap/popper.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/others/plugins.js"></script>
     <script src="js/active.js"></script>
-    
-   <script>
+
+    <script>
         window.onload = function() {
             var redBarWidth = document.querySelector('.widget-title h6').offsetWidth;
             var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
