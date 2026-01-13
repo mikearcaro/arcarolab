@@ -2093,7 +2093,8 @@ hr {
 .publications-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 5px 40px 60px;
+    padding: 20px 40px 60px;
+    margin-top: -35px;
 }
 
 .pub-section {
