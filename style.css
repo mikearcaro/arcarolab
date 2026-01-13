@@ -2295,6 +2295,13 @@ hr {
     padding: 0 0 0 15px;
 }
 
+/* Pull header up to reduce gap after logo */
+.index-logo + #preloader + .header_area,
+.subpage-logo + .header_area,
+.index-logo + .header_area {
+    margin-top: -20px;
+}
+
 .content-divider {
     margin: 25px 0;
     border-bottom: 1px solid #ccc;
@@ -2331,13 +2338,15 @@ hr {
 @media (max-width: 768px) {
     .index-logo,
     .subpage-logo {
-        width: 50%;
+        width: 40%;
+        max-width: 200px;
     }
 }
 
 @media (max-width: 480px) {
     .index-logo,
     .subpage-logo {
-        width: 70%;
+        width: 40%;
+        max-width: 180px;
     }
 }

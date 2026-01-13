@@ -229,14 +229,14 @@
    =========================================== */
 @media (hover: none) and (pointer: coarse) {
     /* Ensure logo above header is visible and sized for mobile */
-    .index-logo,
-    .subpage-logo {
+    img.index-logo,
+    img.subpage-logo {
         display: block !important;
-        width: 50% !important;
-        max-width: 250px;
+        width: 40% !important;
+        max-width: 200px !important;
         margin-left: 0 !important;
         margin-right: auto !important;
-        padding: 10px 0 10px 15px;
+        padding: 10px 0 10px 15px !important;
     }
 
     /* Reset problematic percentage margins */
