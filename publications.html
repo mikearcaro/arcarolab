@@ -28,6 +28,7 @@
         <div class="yummy-load"></div>
     </div>
 
+    <a href="index.html"><img src="img/core-img/logo.png" alt="Arcaro Lab logo" class="subpage-logo"></a>
 
     <!-- ****** Header Area Start ****** -->
         <header class="header_area">
@@ -39,12 +40,6 @@
                             <!-- Menu Area Start -->
                             <div class="collapse navbar-collapse justify-content-center" id="yummyfood-nav">
                                 <ul class="navbar-nav" id="yummy-nav">
-                                    <li class="nav-logo">
-                                        <a href="index.html"><img src="img/core-img/logo.png"></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        &ensp;
-                                    </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="research.html">Research</a>
                                     </li>
@@ -278,4 +273,25 @@
     <script src="js/others/plugins.js"></script>
     <!-- Active JS -->
     <script src="js/active.js"></script>
+
+    <script>
+        window.onload = function() {
+            var redBarWidth = document.querySelector('.widget-title h6').offsetWidth;
+            var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            var fontScaling = 42;
+
+            var fontSize = redBarWidth / fontScaling;
+            navLinks.forEach(function(link) {
+                link.style.fontSize = fontSize + 'px';
+            });
+
+            window.addEventListener('resize', function() {
+                redBarWidth = document.querySelector('.widget-title h6').offsetWidth;
+                fontSize = redBarWidth / fontScaling;
+                navLinks.forEach(function(link) {
+                    link.style.fontSize = fontSize + 'px';
+                });
+            });
+        };
+    </script>
 </body>

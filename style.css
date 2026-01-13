@@ -2286,9 +2286,13 @@ hr {
    Index page styles
    ================================ */
 
-.index-logo {
+.index-logo,
+.subpage-logo {
+    display: block;
     width: 30%;
     height: auto;
+    margin: 0 auto;
+    padding: 15px 0;
 }
 
 .content-divider {
@@ -2323,15 +2327,17 @@ hr {
     width: 31.64%;
 }
 
-/* Index page - responsive */
+/* Logo - responsive */
 @media (max-width: 768px) {
-    .index-logo {
+    .index-logo,
+    .subpage-logo {
         width: 50%;
     }
 }
 
 @media (max-width: 480px) {
-    .index-logo {
+    .index-logo,
+    .subpage-logo {
         width: 70%;
     }
 }
