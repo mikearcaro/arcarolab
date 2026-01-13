@@ -73,10 +73,11 @@
     width: 100%;
 }
 .navbar.navbar-expand-lg .navbar-nav .nav-link {
-    padding: 40px 30px;
+    padding: 0.5em 30px;
     color: #373f6d;
     text-transform: uppercase;
     font-size: 26px;
+    line-height: 2;
 }
 
 
@@ -153,10 +154,11 @@
         width: 100%;
     }
     .navbar.navbar-expand-lg .navbar-nav .nav-link {
-        padding: 40px 30px;
+        padding: 0.5em 30px;
         color: #373f6d;
         text-transform: uppercase;
         font-size: 26px;
+        line-height: 2;
     }
     
     .pagination-area .page-status {
