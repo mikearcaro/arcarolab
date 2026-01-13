@@ -1474,7 +1474,7 @@ li {
     color: #7D2A35;
     padding-top: 10px;
     font-weight: 400;
-    font-size: 0.75em;
+    font-size: 20px;
 }
 
 /* Horizontal rule styling */
@@ -2160,6 +2160,10 @@ hr {
         font-size: 20px;
     }
 
+    .contentsmallheader {
+        font-size: 17px;
+    }
+
     .pub-list li {
         font-size: 15px;
         line-height: 1.5;
@@ -2169,6 +2173,10 @@ hr {
 @media (max-width: 480px) {
     .publications-container {
         padding: 10px 15px 30px;
+    }
+
+    .contentsmallheader {
+        font-size: 15px;
     }
 
     .pub-list li {
