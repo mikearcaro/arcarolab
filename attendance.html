@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Attendance</title>
+</head>
+
+<body>
+
+<h2>Class Attendance</h2>
+
+<form id="attendanceForm">
+
+<label>Name</label><br>
+<input type="text" name="name" required><br><br>
+
+<label>Penn Email</label><br>
+<input type="email" name="email" required><br><br>
+
+<label>Are you in class today?</label><br>
+<select name="in_class">
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select><br><br>
+
+<input type="hidden" id="token" name="token">
+
+<button type="submit">Submit</button>
+
+</form>
+
+<script>
+
+const params = new URLSearchParams(window.location.search)
+const token = params.get("token")
+
+document.getElementById("token").value = token
+
+document.getElementById("attendanceForm").addEventListener("submit", async function(e){
+
+e.preventDefault()
+
+const formData = new FormData(this)
+
+const response = await fetch(
+"https://attendance-worker.michael-j-arcaro.workers.dev/submit",
+{
+method: "POST",
+body: formData
+}
+)
+
+alert("Attendance submitted")
+
+})
+
+</script>
+
+</body>
+</html>
