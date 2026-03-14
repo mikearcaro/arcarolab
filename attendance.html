@@ -1,59 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Attendance</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Class Attendance</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.5;
+    }
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    label {
+      display: block;
+      margin-top: 16px;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    input, select, button {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 24px;
+      cursor: pointer;
+    }
+
+    #status {
+      margin-top: 20px;
+      font-weight: 600;
+    }
+
+    .error {
+      color: #b00020;
+    }
+
+    .success {
+      color: #1a5e20;
+    }
+  </style>
 </head>
-
 <body>
+  <h2>Class Attendance</h2>
 
-<h2>Class Attendance</h2>
+  <form id="attendanceForm">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
 
-<form id="attendanceForm">
+    <label for="email">Penn Email</label>
+    <input type="email" id="email" name="email" required>
 
-<label>Name</label><br>
-<input type="text" name="name" required><br><br>
+    <label for="in_class">Are you in class today?</label>
+    <select id="in_class" name="in_class" required>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
 
-<label>Penn Email</label><br>
-<input type="email" name="email" required><br><br>
+    <input type="hidden" id="token" name="token">
 
-<label>Are you in class today?</label><br>
-<select name="in_class">
-<option value="Yes">Yes</option>
-<option value="No">No</option>
-</select><br><br>
+    <button type="submit" id="submitButton">Submit</button>
+  </form>
 
-<input type="hidden" id="token" name="token">
+  <div id="status"></div>
 
-<button type="submit">Submit</button>
+  <script>
+    const WORKER_SUBMIT_URL = "https://attendance-worker.michael-j-arcaro.workers.dev/submit";
 
-</form>
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get("token");
 
-<script>
+    const form = document.getElementById("attendanceForm");
+    const tokenInput = document.getElementById("token");
+    const statusDiv = document.getElementById("status");
+    const submitButton = document.getElementById("submitButton");
 
-const params = new URLSearchParams(window.location.search)
-const token = params.get("token")
+    if (!token) {
+      statusDiv.textContent = "Missing attendance token.";
+      statusDiv.className = "error";
+      submitButton.disabled = true;
+    } else {
+      tokenInput.value = token;
+    }
 
-document.getElementById("token").value = token
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
 
-document.getElementById("attendanceForm").addEventListener("submit", async function(e){
+      statusDiv.textContent = "";
+      statusDiv.className = "";
 
-e.preventDefault()
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting...";
 
-const formData = new FormData(this)
+      try {
+        const formData = new FormData(form);
 
-const response = await fetch(
-"https://attendance-worker.michael-j-arcaro.workers.dev/submit",
-{
-method: "POST",
-body: formData
-}
-)
+        const response = await fetch(WORKER_SUBMIT_URL, {
+          method: "POST",
+          body: formData
+        });
 
-alert("Attendance submitted")
+        const contentType = response.headers.get("content-type") || "";
 
-})
+        let message = "Attendance submitted.";
 
-</script>
+        if (contentType.includes("application/json")) {
+          const data = await response.json();
+          if (data && data.message) {
+            message = data.message;
+          }
+        } else {
+          const text = await response.text();
+          if (text && text.trim()) {
+            message = text.trim();
+          }
+        }
 
+        if (!response.ok) {
+          throw new Error(message);
+        }
+
+        statusDiv.textContent = message;
+        statusDiv.className = "success";
+
+        form.reset();
+        tokenInput.value = token;
+      } catch (err) {
+        console.error(err);
+        statusDiv.textContent = "Submit failed. " + err.message;
+        statusDiv.className = "error";
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "Submit";
+      }
+    });
+  </script>
 </body>
 </html>
