@@ -5,74 +5,297 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Class Attendance</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.5;
+    :root {
+      --page-bg: #f7f8fa;
+      --card-bg: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #d1d5db;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --success-bg: #ecfdf3;
+      --success-border: #86efac;
+      --success-text: #166534;
+      --error-bg: #fef2f2;
+      --error-border: #fca5a5;
+      --error-text: #991b1b;
+      --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      --radius: 14px;
     }
 
-    h2 {
-      margin-bottom: 24px;
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page-bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+      padding: 24px 16px 40px;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.2vw, 2rem);
+      line-height: 1.2;
+    }
+
+    .intro {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    form {
+      margin: 0;
+    }
+
+    .field {
+      margin-top: 18px;
+    }
+
+    .field:first-of-type {
+      margin-top: 0;
     }
 
     label {
       display: block;
-      margin-top: 16px;
-      margin-bottom: 6px;
-      font-weight: 600;
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 1rem;
     }
 
-    input, select, button {
+    input,
+    select,
+    button {
       width: 100%;
-      max-width: 100%;
-      box-sizing: border-box;
-      padding: 10px;
-      font-size: 16px;
+      font: inherit;
+      border-radius: 10px;
+    }
+
+    input,
+    select {
+      min-height: 52px;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      appearance: none;
+    }
+
+    input:focus,
+    select:focus,
+    button:focus {
+      outline: 3px solid rgba(37, 99, 235, 0.18);
+      outline-offset: 1px;
+    }
+
+    input[type="email"] {
+      text-transform: lowercase;
+    }
+
+    .select-wrap {
+      position: relative;
+    }
+
+    .select-wrap::after {
+      content: "";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid #6b7280;
+      border-bottom: 2px solid #6b7280;
+      transform: translateY(-70%) rotate(45deg);
+      pointer-events: none;
+    }
+
+    .help {
+      margin-top: 6px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .actions {
+      margin-top: 26px;
     }
 
     button {
-      margin-top: 24px;
+      min-height: 56px;
+      padding: 14px 18px;
+      border: none;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.05rem;
       cursor: pointer;
+      transition: background 0.15s ease, transform 0.02s ease;
     }
 
-    #status {
-      margin-top: 20px;
+    button:hover:not(:disabled) {
+      background: var(--accent-hover);
+    }
+
+    button:active:not(:disabled) {
+      transform: translateY(1px);
+    }
+
+    button:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    .status {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      display: none;
       font-weight: 600;
     }
 
-    .error {
-      color: #b00020;
+    .status.error {
+      display: block;
+      background: var(--error-bg);
+      border: 1px solid var(--error-border);
+      color: var(--error-text);
     }
 
-    .success {
-      color: #1a5e20;
+    .confirmation {
+      display: none;
+      margin-top: 20px;
+      padding: 18px 16px;
+      border-radius: 12px;
+      background: var(--success-bg);
+      border: 1px solid var(--success-border);
+      color: var(--success-text);
+      font-weight: 700;
+      text-align: center;
+      font-size: 1.05rem;
+    }
+
+    .footer-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 16px 12px 28px;
+      }
+
+      .card {
+        padding: 18px 16px;
+        border-radius: 12px;
+      }
+
+      h1 {
+        font-size: 1.45rem;
+      }
+
+      .intro {
+        font-size: 0.98rem;
+      }
+
+      input,
+      select {
+        min-height: 50px;
+      }
+
+      button {
+        min-height: 54px;
+        font-size: 1rem;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .card {
+        padding: 32px;
+      }
     }
   </style>
 </head>
 <body>
-  <h2>Class Attendance</h2>
+  <main class="wrapper">
+    <section class="card">
+      <h1>Class Attendance</h1>
+      <p class="intro">Please complete this form once you have opened it from the class attendance link or QR code.</p>
 
-  <form id="attendanceForm">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required>
+      <form id="attendanceForm" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            autocomplete="name"
+            autocapitalize="words"
+            spellcheck="false"
+            required
+          >
+        </div>
 
-    <label for="email">Penn Email</label>
-    <input type="email" id="email" name="email" required>
+        <div class="field">
+          <label for="email">Penn Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            autocapitalize="none"
+            autocorrect="off"
+            spellcheck="false"
+            inputmode="email"
+            required
+          >
+          <div class="help">Use your Penn email address.</div>
+        </div>
 
-    <label for="in_class">Are you in class today?</label>
-    <select id="in_class" name="in_class" required>
-      <option value="Yes">Yes</option>
-      <option value="No">No</option>
-    </select>
+        <div class="field">
+          <label for="in_class">Are you in class today?</label>
+          <div class="select-wrap">
+            <select id="in_class" name="in_class" required>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+        </div>
 
-    <input type="hidden" id="token" name="token">
+        <input type="hidden" id="token" name="token">
 
-    <button type="submit" id="submitButton">Submit</button>
-  </form>
+        <div class="actions">
+          <button type="submit" id="submitButton">Submit Attendance</button>
+        </div>
+      </form>
 
-  <div id="status"></div>
+      <div id="status" class="status"></div>
+      <div id="confirmation" class="confirmation">Attendance submitted.</div>
+      <div class="footer-note" id="footerNote">You only need to submit once.</div>
+    </section>
+  </main>
 
   <script>
     const WORKER_SUBMIT_URL = "https://attendance-worker.michael-j-arcaro.workers.dev/submit";
@@ -82,23 +305,46 @@
 
     const form = document.getElementById("attendanceForm");
     const tokenInput = document.getElementById("token");
-    const statusDiv = document.getElementById("status");
+    const statusBox = document.getElementById("status");
+    const confirmationBox = document.getElementById("confirmation");
     const submitButton = document.getElementById("submitButton");
+    const footerNote = document.getElementById("footerNote");
+
+    let isSubmitting = false;
+    let hasSubmittedSuccessfully = false;
+
+    function showError(message) {
+      statusBox.textContent = message;
+      statusBox.className = "status error";
+    }
+
+    function clearStatus() {
+      statusBox.textContent = "";
+      statusBox.className = "status";
+    }
 
     if (!token) {
-      statusDiv.textContent = "Missing attendance token.";
-      statusDiv.className = "error";
-      submitButton.disabled = true;
+      form.style.display = "none";
+      footerNote.style.display = "none";
+      showError("Attendance must be accessed through the class QR code or attendance link.");
     } else {
       tokenInput.value = token;
     }
 
-    form.addEventListener("submit", async function (e) {
-      e.preventDefault();
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
 
-      statusDiv.textContent = "";
-      statusDiv.className = "";
+      if (isSubmitting || hasSubmittedSuccessfully) {
+        return;
+      }
 
+      clearStatus();
+
+      if (!form.reportValidity()) {
+        return;
+      }
+
+      isSubmitting = true;
       submitButton.disabled = true;
       submitButton.textContent = "Submitting...";
 
@@ -111,7 +357,6 @@
         });
 
         const contentType = response.headers.get("content-type") || "";
-
         let message = "Attendance submitted.";
 
         if (contentType.includes("application/json")) {
@@ -127,21 +372,20 @@
         }
 
         if (!response.ok) {
-          throw new Error(message);
+          throw new Error(message || "Submission failed.");
         }
 
-        statusDiv.textContent = message;
-        statusDiv.className = "success";
-
-        form.reset();
-        tokenInput.value = token;
-      } catch (err) {
-        console.error(err);
-        statusDiv.textContent = "Submit failed. " + err.message;
-        statusDiv.className = "error";
-      } finally {
+        hasSubmittedSuccessfully = true;
+        form.style.display = "none";
+        footerNote.style.display = "none";
+        confirmationBox.textContent = message;
+        confirmationBox.style.display = "block";
+      } catch (error) {
+        console.error(error);
+        showError("Submit failed. " + error.message);
         submitButton.disabled = false;
-        submitButton.textContent = "Submit";
+        submitButton.textContent = "Submit Attendance";
+        isSubmitting = false;
       }
     });
   </script>
