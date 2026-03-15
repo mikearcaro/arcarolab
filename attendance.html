@@ -298,7 +298,7 @@
   </main>
 
   <script>
-    const WORKER_SUBMIT_URL = "https://attendance-worker.michael-j-arcaro.workers.dev/submit";
+    const WORKER_SUBMIT_URL = "https://psyc1230.arcarolab.org/submit";
 
     const params = new URLSearchParams(window.location.search);
     const token = params.get("token");
@@ -353,7 +353,8 @@
 
         const response = await fetch(WORKER_SUBMIT_URL, {
           method: "POST",
-          body: formData
+          body: formData,
+          credentials: "include"
         });
 
         const contentType = response.headers.get("content-type") || "";
