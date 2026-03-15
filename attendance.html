@@ -300,6 +300,11 @@
   <script>
     const WORKER_SUBMIT_URL = "https://psyc1230.arcarolab.org/submit";
 
+    function isValidPennEmail(email) {
+      const value = String(email || "").trim().toLowerCase();
+      return value.endsWith("@upenn.edu") || value.endsWith(".upenn.edu");
+    }
+
     const params = new URLSearchParams(window.location.search);
     const token = params.get("token");
 
@@ -341,6 +346,13 @@
       clearStatus();
 
       if (!form.reportValidity()) {
+        return;
+      }
+
+      const emailValue = document.getElementById("email").value;
+
+      if (!isValidPennEmail(emailValue)) {
+        showError("Please enter a valid Penn email address ending in upenn.edu.");
         return;
       }
 
