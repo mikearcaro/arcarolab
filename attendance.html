@@ -305,6 +305,21 @@
       return value.endsWith("@upenn.edu") || value.endsWith(".upenn.edu");
     }
 
+    async function logPageView(token) {
+      try {
+        const data = new FormData();
+        data.append("token", token);
+
+        await fetch("https://psyc1230.arcarolab.org/view_token_page", {
+          method: "POST",
+          body: data,
+          credentials: "include"
+        });
+      } catch (e) {
+        console.error("Page view logging failed", e);
+      }
+    }
+
     const params = new URLSearchParams(window.location.search);
     const token = params.get("token");
 
@@ -334,6 +349,7 @@
       showError("Attendance must be accessed through the class QR code or attendance link.");
     } else {
       tokenInput.value = token;
+      logPageView(token);
     }
 
     form.addEventListener("submit", async function (event) {
