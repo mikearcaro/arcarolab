@@ -141,7 +141,7 @@ const LAB_MEMBERS = [
   { name: 'Emily Meyer',          role: 'Graduate Student',        img: PEOPLE_IMG + 'MeyerE.jpg',       links: [{ label: 'Bluesky', href: 'https://bsky.app/profile/emilymeyer.bsky.social' }] },
   { name: 'Monami Nishio',        role: 'Graduate Student',        note: 'co-advised with Dr. Allyson Mackey', img: PEOPLE_IMG + 'Monami.jpg', links: [{ label: 'CV', href: 'https://www.arcarolab.org/pdf/labfiles/20250828CV_MonamiNishio.pdf' }] },
   { name: 'Reyansh Sathishkumar', role: 'Graduate Student',        img: PEOPLE_IMG + 'Reyansh.jpg',      links: [] },
-  { name: 'Camila Romero',       role: '',                        img: PEOPLE_IMG + 'Romero_Camila.jpeg', links: [] },
+  { name: 'Camila Romero',       role: 'Graduate Student',                        img: PEOPLE_IMG + 'Romero_Camila.jpeg', links: [] },
 ];
 
 const ALUMNI = [
