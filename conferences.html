@@ -1,350 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Conference presentations and posters from the Arcaro Lab.">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Title -->
-    <title>Conferences | Arcaro Lab</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
-
-    <!-- Core Stylesheet -->
-    <link href="style.css" rel="stylesheet">
-
-    <!-- Responsive CSS -->
-    <link href="css/responsive/responsive.css" rel="stylesheet">
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conference Presentations — Arcaro Lab</title>
+  <meta name="description" content="Conference presentations from the Arcaro Lab."/>
+  <link rel="icon" href="img/core-img/favicon.ico"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script>(function(){var k='arcarolab-theme',s=localStorage.getItem(k),t=s||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+  <!-- Retro mode persistence: apply immediately to prevent flash -->
+  <script>
+    if (localStorage.getItem('retro_mode')) {
+      document.documentElement.classList.add('retro-pending');
+      var _rl = document.createElement('link');
+      _rl.rel = 'stylesheet';
+      _rl.href = 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap';
+      document.head.appendChild(_rl);
+    }
+  </script>
 </head>
+<body data-page="conferences" data-nav="Publications">
+  <div id="toolbar"></div>
+  <main>
+    <div class="pub-page">
 
-<body>
-    <!-- Preloader Start -->
-    <div id="preloader">
-        <div class="yummy-load"></div>
+      <!-- Identical tab bar -->
+      <nav class="pub-tab-bar" aria-label="Publication sections">
+        <button class="pub-tab-btn" data-tab="publications">Publications</button>
+        <button class="pub-tab-btn" data-tab="conferences">Conference Presentations</button>
+        <a class="pub-scholar-link" href="https://scholar.google.com/citations?user=07tNFdgAAAAJ&hl=en"
+           target="_blank" rel="noopener noreferrer">Google Scholar &rarr;</a>
+      </nav>
+
+      <!-- Publications panel (hidden by default) -->
+      <div id="tab-publications" style="display:none">
+        <section id="preprints">
+          <div class="pub-group">
+            <h2 class="pub-year">Preprints</h2>
+            <ul class="pub-list" id="preprints-list"></ul>
+          </div>
+        </section>
+        <section aria-label="Journal publications" id="publications-list"></section>
+      </div>
+
+      <!-- Conferences panel -->
+      <div id="tab-conferences">
+        <section aria-label="Conference presentations" id="conferences-list"></section>
+      </div>
+
     </div>
-
-    <a href="index.html"><img src="img/core-img/logo.png" alt="Arcaro Lab logo" class="subpage-logo"></a>
-
-    <!-- ****** Header Area Start ****** -->
-        <header class="header_area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <nav class="navbar navbar-expand-lg">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#yummyfood-nav" aria-controls="yummyfood-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i> Menu</button>
-                            <!-- Menu Area Start -->
-                            <div class="collapse navbar-collapse justify-content-center" id="yummyfood-nav">
-                                <ul class="navbar-nav" id="yummy-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="research.html">Research</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="people.html">People</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="publications.html">Publications</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="https://github.com/arcaro-lab">Github</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="contact.html">Contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- ****** Header Area End ****** -->
-
-<!-- Red bar -->
-<div class="single-widget-area about-me-widget text-left">
-    <div class="widget-title">
-        <h6></h6>
-    </div>
-</div>
-
-<div class="publications-container">
-    <div class="contentsmallheader">
-        <a href="publications.html">Journal publications</a>
-    </div>
-
-    <!-- 2026 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2025</h3>
-        <ul class="pub-list">
-            <li>Oishi H, Takemura H, Hitchens TK, Livingstone MS, Weiner KS, <b>Arcaro MJ</b> (2026) Prenatal emergence of occipital white matter tracts in rhesus macaque brains. <em>Annual Meeting of Japan Human Brain Mapping Society 2026.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2025 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2025</h3>
-        <ul class="pub-list">
-            <li>Ayzenberg V, <b>Arcaro MJ</b> (2025) The building blocks of vision: Cortical and subcortical organization of the newborn visual system. <em>Vision Sciences Society Conference 2025.</em></li>
-            <li>Liu X, <b>Arcaro MJ</b> (2025) A common pulvinar-cortical architecture across visual tasks. <em>Vision Sciences Society Conference 2025.</em></li>
-            <li>Meyer E, Zhang L, Cottaris NP, Brainard DH, <b>Arcaro MJ</b> (2025) Modeling tree shrew high-level visual behaviors. <em>Vision Sciences Society Conference 2025.</em></li>
-            <li>Jagadeesh AV, Najafian S, <b>Arcaro MJ</b>*, Livingstone MS* (2025) Spatiofeatural receptive field modeling of primate IT cortex neurons. <em>Vision Sciences Society Conference 2025.</em></li>
-            <li>Najafian S, Berezovskii V, <b>Arcaro MJ</b>*, Livingstone MS* (2025) Exploring the influence of binocular anti-coactivation on ocular dominance column formation beyond primary visual cortex. <em>Vision Sciences Society Conference 2025.</em></li>
-            <li>Caldinelli C, Li JJ, Chao G, <b>Arcaro MJ</b> & Collins A. The role of the thalamus in dynamic decision-making. <em>RLDM 2025.</em></li>
-            <li>Oishi H, Berezovski VK, Livingstone MS, Weiner KS, <b>Arcaro MJ</b> (2025) Eccentricity representation shapes the neurometabolic organization in macaque IT categorical regions. <em>Japanese Human Brain Mapping Society.</em></li>
-            <li>Meyer EE, <b>Arcaro MJ</b> (2025) Investigating the capacity for tree shrew high-level vision. <em>Tree Shrew Discovery Conference 2025.</em></li>
-            <li>Lugovskoy AA, Meyer EE, <b>Arcaro MJ</b> (2025) An open-source, customizable system for studying high-level visual behavior in tree shrews. <em>Tree Shrew Discovery Conference 2025.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2024 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2024</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b> (2024) Topographic maps scaffold visual development. <em>Society for Neuroscience Conference Abstracts 49 Symposium.</em></li>
-            <li>Liu X, <b>Arcaro MJ</b> (2024) Functional coupling with cognitive control networks reveals shared and distinct organizational principles of pulvinar and mediodorsal nucleus. <em>Society for Neuroscience Conference Abstracts 49.</em></li>
-            <li>Oishi H, Berezovski VK, Livingstone MS, Weiner KS, <b>Arcaro MJ</b> (2024) The histo-architecture of inferotemporal face patches in macaques. <em>Society for Neuroscience Conference Abstracts 49.</em></li>
-            <li>Najafian S, Berezovski VK, <b>Arcaro MJ</b>, MS Livingstone (2024) Exploring the influence of binocular co-activation on ocular dominance column formation beyond primary visual cortex. <em>Society for Neuroscience Conference Abstracts 49.</em></li>
-            <li>Caldinelli C, Li JJ, <b>Arcaro MJ</b>, Collins AG (2024) The role of the thalamus in dynamic decision-making. <em>Society for Neuroscience Conference Abstracts 49.</em></li>
-            <li>Liu X, <b>Arcaro MJ</b>, Tran MLG, Alitto HJ, Usrey W, Kastner S (2024) Endogenous attentional sampling under spatial uncertainty. <em>Society for Neuroscience Conference Abstracts 49.</em></li>
-            <li>Ayzenberg V & <b>Arcaro MJ</b> (2024) The building blocks of vision: cortical and subcortical organization of the newborn visual system. <em>FIT'NG Conference.</em></li>
-            <li>Hwang S, Wekselblatt J, Hitchens KT, Shapiro MG, <b>Arcaro MJ</b> (2024) Functional neuroimaging of the tree shrew (Tupaia belangeri) brain. <em>Experimental Nuclear Magnetic Resonance Conference.</em></li>
-            <li>Xie Y, <b>Arcaro MJ</b>*, Imam N* (2024) Modeling the formation of extrastriate visual maps. <em>Vision Sciences Society 2024.</em> *equal contribution</li>
-            <li>Jagadeesh A, Najafian S, Kay KN, <b>Arcaro MJ</b>*, Livingstone MS* (2024) Spatially-specific feature tuning drives response properties of macaque IT cortex. <em>Vision Sciences Society 2024.</em> *equal contribution</li>
-            <li>Liu X, <b>Arcaro MJ</b>, Kastner S (2024) Endogenous attentional sampling under spatial uncertainty: preliminary results. <em>Vision Sciences Society 2024.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2023 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2023</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b>, Hitchens KT, Wekselblatt J (2023) A multimodal digital atlas of the tree shrew (Tupaia belangeri) brain. <em>Society for Neuroscience Conference Abstracts 48.</em></li>
-            <li>Meyer EE, Song C, Ong WS, <b>Arcaro MJ</b> (2023) Investigating the capacity for tree shrew high-level vision. <em>Society for Neuroscience Conference Abstracts 48.</em></li>
-            <li>Sharma S, <b>Arcaro MJ</b>, Livingstone MS (2023) The impact of strobe-rearing on the development of the macaque visual system. <em>Society for Neuroscience Conference Abstracts 48.</em></li>
-            <li>Oishi H, Berezovskii VK, Livingstone MS, Weiner KS, <b>Arcaro MJ</b> (2023) The microarchitecture of face patches in macaques. <em>Organization of Human Brain Mapping 2023.</em></li>
-            <li>Meyer EE & <b>Arcaro MJ</b> (2023) Larger area size, not increased number, better explains expansion of human visual cortex. <em>Vision Sciences Society 2023.</em></li>
-            <li><b>Arcaro MJ</b> (2023) The building blocks of vision: evidence for a hierarchical, retinotopic organization in the human neonate brain. <em>Vision Sciences Society 2023.</em></li>
-            <li><b>Arcaro MJ</b> (2023) Topographic constraints on visual development. <em>Vision Sciences Society 2023 Symposium.</em></li>
-            <li>Sharma S, <b>Arcaro MJ</b>, Livingstone MS (2023) Strobe-rearing preserves motion selectivity but disrupts direction selectivity in macaque area MT. <em>Vision Sciences Society 2023.</em></li>
-            <li>Rodriguez IF, Linsley D, Gopal J, Fel T, <b>Arcaro MJ</b>, Sharma S, Livingstone MS, Serre T (2023) Harmonizing the visual strategies of image-computable models with humans yields more performant and interpretable models of primate visual system function. <em>Vision Sciences Society 2023.</em></li>
-            <li><b>Arcaro MJ</b> (2023) Preliminary report on a population template atlas of the tree shrew brain. <em>Tree Shrew Discovery 2023.</em></li>
-            <li>Meyer EE, Ong WS, Balboa M, <b>Arcaro MJ</b>. (2023) Assessing tree shrew high-level visual behavior using conventional and natural paradigms. <em>Tree Shrew Discovery 2023.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2022 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2022</h3>
-        <ul class="pub-list">
-            <li>Meyer EE, Ong WS, Balboa M, <b>Arcaro MJ</b>. (2022) Assessing tree shrew high-level visual behavior using conventional and natural paradigms. <em>Society for Neuroscience Conference Abstracts 47: Program Number 297.04.</em></li>
-            <li>Oishi, H, Berezovski VK, Livingstone MS, Weiner K., & <b>Arcaro MJ</b>. (2022) The microarchitecture of face-selective patches in macaques. <em>Society for Neuroscience Conference Abstracts 47: Program Number 715.09.</em></li>
-            <li><b>Arcaro MJ</b>. (2022). Macro- and microstructural analyses of face-selective patches in macaques. <em>Workshop on Cortical Sulci. Paris, France.</em></li>
-            <li>Song C & <b>Arcaro MJ</b> (2022) Mapping anatomical connectivity between visual cortex and the pulvinar in human neonates. <em>Vision Sciences Society 2022.</em></li>
-            <li><b>Arcaro MJ</b>, Guest DR, Allen E, Kay KN (2022) Recapitulation of cortical visual hierarchy in the human pulvinar. <em>Vision Sciences Society 2022.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2021 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2021</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b> & Livingstone MS (2021) Face neurons see Waldo. <em>Society for Neuroscience Conference Abstracts 46: Program Number P487.07.</em></li>
-            <li><b>Arcaro MJ</b> (2021) Sulcal morphology predicts face patches in macaques. <em>FLUX 2021 Symposium.</em></li>
-            <li>Ellis C, Yates T, <b>Arcaro MJ</b>, Turk-Browne NB (2021) Prediction of retinotopic organization in infant visual cortex from movies. <em>V-VSS 2021.</em></li>
-            <li>Guest D, Allen E, Wu Y, Naselaris T, <b>Arcaro MJ</b>, Kay K (2021) Evidence for a ventral visual stream in the pulvinar. <em>V-VSS 2021.</em></li>
-            <li>Martynek M, Kastner S, Livingstone MS, <b>Arcaro MJ</b> (2021). Testing the molecular anchor hypothesis in humans and macaques. <em>SfN Global Connectome.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2020 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2020</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b>, Mautz T, Livingstone MS (2020). Anatomical folding predicts the location of face-selective domains in macaque IT. <em>Vision Sciences Society Meeting Abstract 20. V-VSS 2020.</em></li>
-            <li>Ellis C, Yates T, Skalaban L, Bejjanki V, <b>Arcaro MJ</b>, Turk-Browne N (2020). Retinotopic mapping with fMRI in awake, behaving infants. <em>Vision Sciences Society Meeting Abstract 20. V-VSS 2020.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2019 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2019</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b>, Ponce CR, Livingstone MS (2019). The neurons that mistook a hat for a face. <em>Society for Neuroscience Conference Abstracts 45: Program Number 489.05.</em></li>
-            <li><b>Arcaro MJ</b>, Ponce CR, Livingstone MS (2019). The neurons that mistook a hat for a face. <em>Vision Sciences Society Meeting Abstract 19.</em></li>
-            <li>Natu V, <b>Arcaro MJ</b>, Barnett MA, Gomez J, Livingstone MS, Grill-Spector K, Weiner KS (2019). Development and evolution of sulcal morphology in place-selective regions of ventral temporal cortex. <em>HBM 2019.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2018 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2018</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b>, Schade PF, Livingstone MS (2018). Multiple body maps in newborn macaques. <em>Society for Neuroscience Conference Abstracts 44: Program Number 642.14.</em></li>
-            <li><b>Arcaro MJ</b>, Schade PF, Livingstone MS (2018). Preserved cortical organization in the absence of early visual input. <em>Vision Sciences Society Meeting Abstract 18.</em></li>
-            <li>Schade PF, <b>Arcaro MJ</b>, Livingstone MS (2018). Effects of experience on face and body selective neurons in macaque IT. <em>Society for Neuroscience Conference Abstracts 44: Program Number 307.16.</em></li>
-            <li>Benson NC, Jamison KW, <b>Arcaro MJ</b>, Vu AT, Glasser MF, Van Essen DC, Ugurbil K, Winawer J, Kay KN (2018). The human connectome project 7t retinotopy dataset: A freely available resource of human visual organization. <em>Society for Neuroscience Conference Abstracts 44: Program Number 719.07.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2017 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2017</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b>, Schade PF, Livingstone MS (2017). Experience-dependent development of the visual system is anchored to an innate retinotopic organization. <em>Society for Neuroscience Conference Abstracts 43: Program Number 492.08.</em></li>
-            <li><b>Arcaro MJ</b> & Livingstone MS (2017). Retinotopic organization of scene area in macaque inferior temporal cortex and its implications for development. <em>Vision Sciences Society Meeting Abstract 17.</em></li>
-            <li>Livingstone MS, <b>Arcaro MJ</b>, Schade PF, Vincent JL, Ponce CR (2017). The effects of early face deprivation on the macaque face-patch system. <em>Society for Neuroscience Conference Abstracts 43: Program Number 492.09.</em></li>
-            <li>Todd N, Sun T, Zhang Y, Power C, <b>Arcaro MJ</b>, Patz S, Livingstone M, McDannold N (2017) Resting state functional MRI for evaluation of focused ultrasound induced disruption of the blood brain barrier. <em>ISTU. Nashville, TN. Abstract #2956547.</em></li>
-            <li>Todd N, Sun T, Zhang Y, Power C, <b>Arcaro MJ</b>, Patz S, Livingstone M, McDannold N (2017) Functional MRI evaluation of a novel approach to neuromodulation: Targeted delivery of GABA via focused ultrasound-mediated disruption of the blood-brain barrier. <em>ISMRM. Honolulu, Hawaii. Abstract #0109.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2016 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2016</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b>, Vincent JL, Schade P, Srihasam K, Livingstone MS (2016). A retinotopic proto-organization in IT present at birth. <em>Society for Neuroscience Conference Abstracts 42: Program Number 800.04.</em></li>
-            <li>Culham JC, <b>Arcaro MJ</b>, Thaler L, McLean DA, Quinlan DJ, Dutton GN, Goodale MA, Kastner S (2016). Cortical and subcortical responses to moving stimuli in a patient with Riddoch phenomenon arising from bilateral visual cortex lesions. <em>34th European Workshop on Cognitive Neuropsychology. Bressanone, Italy. Poster #114.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2015 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2015</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b>, Pinsk MA, Kastner S (2015). Functional and anatomical organization of the dorsal pulvinar in humans. <em>Society for Neuroscience Conference Abstracts 41: Program Number 148.27.</em></li>
-            <li>Lombaert H, <b>Arcaro MJ</b>, Kastner S, Ayache N (2015). Brain transfer for the analysis of cortical data. <em>Society for Neuroscience Conference Abstracts 41: Program Number 830.11.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2014 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2014</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b>, Pinsk MA, Kastner S (2014). Functional and anatomical connectivity between the pulvinar and temporal cortex. <em>Society for Neuroscience Conference Abstracts 40: Program Number 816.15.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2013 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2013</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b>, Pinsk MA, Kastner S (2013). Investigating the organization of functional and anatomical thalamo-cortical connectivity in the human pulvinar. <em>Society for Neuroscience Nanosymposium 310: Program Number 310.08.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2012 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2012</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b>, Honey CJ, Mruczek REB, Kastner S, Hasson U (2012). Functional connectivity reveals a large-scale eccentricity organization within visual cortex. <em>Society for Neuroscience Conference Abstracts 38: Program Number 573.08.</em></li>
-            <li>Wang L, Mruczek REB, <b>Arcaro MJ</b>, Kastner S (2012). Visual topographic probability maps (VTPM) in standard MNI space. <em>Society for Neuroscience Conference Abstracts.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2011 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2011</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b> & Kastner S (2011). Topographic organization and attention functions of the human pulvinar. <em>Society for Neuroscience Minisymposium 113: Program Number 113.02.</em></li>
-            <li><b>Arcaro MJ</b>, Mclean DA, Quinlan J, Dutton GN, Goodale MA, Kastner S, Culham JC (2011). Cortical and subcortical response properties in a patient with visual cortex lesions. <em>Society for Neuroscience Conference Abstracts 37: Program Number 695.12.</em></li>
-            <li>Pinsk MA, Saalmann YB, Wang L, <b>Arcaro MJ</b>, Li X, Kastner S (2011). Electrophysiological basis of resting state fMRI. <em>Society for Neuroscience Conference Abstracts 37: Program Number 398.08.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2010 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2010</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b>, Pinsk MA, McMains SA, Kastner S (2010). Visuotopic organization of the human pulvinar revealed using high-resolution fMRI. <em>Society for Neuroscience Conference Abstracts 36: Program Number 72.14.</em></li>
-            <li><b>Arcaro MJ</b>, Pinsk MA, Li X, Kastner S (2010). Topographic organization of posterior parietal cortex in awake macaque monkeys: an fMRI study. <em>Gordon Conference: Neurobiology of Cognition, Waterville Valley, NH.</em></li>
-            <li>Pinsk MA, <b>Arcaro MJ</b>, Kastner S (2010). A comparative approach using fMRI to investigate the face perception network in humans and macaques. <em>ECVP. Lausanne, Switzerland.</em></li>
-            <li>Caplovitz GP, <b>Arcaro MJ</b>, Kastner S (2010). Categorical representation of visually suppressed objects in visual cortex. <em>Vision Sciences Society Meeting Abstract.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2009 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2009</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b>, Pinsk MA, Konen C, Li X, Kastner S (2009). Topographic organization of posterior parietal cortex in awake macaque monkeys revealed using fMRI. <em>Society for Neuroscience Conference Abstracts 35: Program Number 759.3.</em></li>
-            <li>Lee RF, Xu J, Prabhakaran K, <b>Arcaro MJ</b> (2009). Spatial and spectral analysis for a radial sampling balance SSFP for fMRI. <em>ISMRM: Program Number 7071.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2008 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2008</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b> & Kastner S (2008). Neural correlates of binocular rivalry in the human visual system using simple and complex stimuli. <em>Society for Neuroscience Conference Abstracts 34: Program Number 462.24.</em></li>
-            <li><b>Arcaro MJ</b>, McMains S, Kastner S (2008). Phase-encoded attention tasks reveal topographic maps in posterior parahippocampal cortex. <em>Vision Sciences Society Meeting Abstract (8)6, 1001.</em></li>
-            <li>Pinsk MA, <b>Arcaro MJ</b>, Konen CS, Li X, Kastner S, Inati SJ (2008). Improved functional MRI of the macaque ventral visual pathway at 3T using multi-echo EPI and dynamic, field map corrected image reconstruction. <em>Society for Neuroscience Conference Abstracts 34: Program Number 260.2.</em></li>
-            <li>Konen CS, Pinsk MA, <b>Arcaro MJ</b>, Li X, Inati SJ, Kastner S (2008). Object representations in monkey posterior parietal cortex. <em>Society for Neuroscience Conference Abstracts 34: Program Number 261.2.</em></li>
-            <li>Konen CS, Pinsk MA, <b>Arcaro MJ</b>, Kastner S (2008). Object representations in the dorsal pathway: fMRI adaptation effects in macaque posterior parietal cortex. <em>Vision Sciences Society Meeting Abstract (8)6, 493.</em></li>
-        </ul>
-    </section>
-
-    <!-- 2007 -->
-    <section class="pub-section">
-        <h3 class="pub-year">2007</h3>
-        <ul class="pub-list">
-            <li><b>Arcaro MJ</b>, McMains S, Kastner S (2007). Phase-encoded attentive tracking reveals topographic maps in human ventral occipital cortex. <em>Society for Neuroscience Conference Abstracts 33: Program Number 280.4.</em></li>
-        </ul>
-    </section>
-</div>
-
-<!-- ****** Footer Menu Area Start ****** -->
-    <footer class="footer_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="footer-content">
-                        <!-- Logo Area Start -->
-                        <div class="footer-logo-area text-center">
-                            <img src="img/core-img/pennlogo.jpg" alt="Penn Logo" class="footer-logo">
-                        </div>
-                        <p class="footer-link"><a href="https://www.upenn.edu/" target="_blank" rel="noopener noreferrer">University of Pennsylvania</a></p>
-                        <p class="footer-link-dense"><a href="https://psychology.sas.upenn.edu/" target="_blank" rel="noopener noreferrer">Department of Psychology</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-    <!-- Jquery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap-4 js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins JS -->
-    <script src="js/others/plugins.js"></script>
-    <!-- Active JS -->
-    <script src="js/active.js"></script>
-
-    <script>
-        window.onload = function() {
-            var redBarWidth = document.querySelector('.widget-title h6').offsetWidth;
-            var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-            var fontScaling = 42;
-
-            var fontSize = redBarWidth / fontScaling;
-            navLinks.forEach(function(link) {
-                link.style.fontSize = fontSize + 'px';
-            });
-
-            window.addEventListener('resize', function() {
-                redBarWidth = document.querySelector('.widget-title h6').offsetWidth;
-                fontSize = redBarWidth / fontScaling;
-                navLinks.forEach(function(link) {
-                    link.style.fontSize = fontSize + 'px';
-                });
-            });
-        };
-    </script>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script src="js/data.js"></script>
+  <script src="js/site.js"></script>
 </body>
 </html>

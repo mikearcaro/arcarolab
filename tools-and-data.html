@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tools &amp; Data — Arcaro Lab</title>
+  <meta name="description" content="Open-source tools and data from the Arcaro Lab: Brainana, ShrewBox, BrainMaps, and more."/>
+  <link rel="icon" href="img/core-img/favicon.ico"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script>
+    (function(){
+      var k='arcarolab-theme';
+      var s=localStorage.getItem(k);
+      var t=s?s:(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+      document.documentElement.setAttribute('data-theme',t);
+    })();
+  </script>
+  <!-- Retro mode persistence: apply immediately to prevent flash -->
+  <script>
+    if (localStorage.getItem('retro_mode')) {
+      document.documentElement.classList.add('retro-pending');
+      var _rl = document.createElement('link');
+      _rl.rel = 'stylesheet';
+      _rl.href = 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap';
+      document.head.appendChild(_rl);
+    }
+  </script>
+</head>
+<body data-page="openscience" data-nav="Tools &amp; Data">
+
+  <div id="toolbar"></div>
+
+  <main>
+    <div id="openscience-list">
+      <!-- rendered by JS -->
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

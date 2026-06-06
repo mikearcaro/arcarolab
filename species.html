@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Species — Arcaro Lab</title>
+  <meta name="description" content="The Arcaro Lab studies vision across three species: humans, rhesus macaques, and tree shrews."/>
+  <link rel="icon" href="img/core-img/favicon.ico"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script>(function(){var k='arcarolab-theme',s=localStorage.getItem(k),t=s||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+  <script>
+    if (localStorage.getItem('retro_mode')) {
+      document.documentElement.classList.add('retro-pending');
+      var _rl = document.createElement('link');
+      _rl.rel = 'stylesheet';
+      _rl.href = 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap';
+      document.head.appendChild(_rl);
+    }
+  </script>
+</head>
+<body data-page="species" data-nav="Species">
+
+  <div id="toolbar"></div>
+
+  <main>
+
+    <!-- ── INTRO ─────────────────────────────────────────────────── -->
+    <div class="species-intro-wrap">
+      <div class="species-intro-text">
+        <h1 class="species-page-title">The importance of animal research</h1>
+        <p class="species-intro-p1">
+          Animal research underpins most of the defining advances in modern medicine. Penicillin's clinical potential was first confirmed in mice. The entire childhood vaccine schedule, from polio to COVID-19, required animal safety testing before human trials. Statins and beta blockers were both developed in animal models; statins alone prevent an estimated 200,000 deaths annually in the United States. The understanding of how neurons fire came from Hodgkin and Huxley's experiments in squid; the genetic basis of cancer from studies in fruit flies, mice, and retroviruses. Within vision science, work in cats and monkeys produced the foundational account of visual cortex organization, establishing cortical columns, critical periods, and experience-dependent plasticity as principles that still define the field.
+        </p>
+        <p class="species-intro-p2">
+          Animal research is central to our lab’s effort to understand how visual systems are built. Humans, rhesus macaques, and tree shrews differ substantially in experience, behavior, brain size, and developmental timeline, yet all three share the basic mammalian blueprint for visual system organization. Studying the same questions across these species lets us separate what is universal from what is lineage-specific. When a principle holds across all three, we can be confident it reflects something broadly conserved about how visual systems are built. When a feature differs, we gain leverage on the factors that shaped it.
+        </p>
+      </div>
+
+      <div class="species-tree-col">
+        <svg width="100%" viewBox="0 0 460 710" role="img" style="color:var(--ink)">
+          <title>Phylogenetic tree of lab species</title>
+
+          <style>
+            .species-tree-link { cursor: pointer; }
+            .species-tree-link:focus circle,
+            .species-tree-link:hover circle { stroke-width: 2.5; }
+          </style>
+          <defs>
+            <clipPath id="cp-ts"><circle cx="224" cy="170" r="28"/></clipPath>
+            <clipPath id="cp-mq"><circle cx="224" cy="470" r="28"/></clipPath>
+            <clipPath id="cp-hm"><circle cx="224" cy="635" r="28"/></clipPath>
+          </defs>
+
+          <!-- Divergence labels: shifted left with short leader lines ending before the node dots -->
+          <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="square" opacity="0.45">
+            <line x1="39"  y1="163" x2="67"  y2="163"/>
+            <line x1="69"  y1="270" x2="97"  y2="270"/>
+            <line x1="94"  y1="369" x2="122" y2="369"/>
+            <line x1="119" y1="457" x2="147" y2="457"/>
+            <line x1="142" y1="553" x2="170" y2="553"/>
+          </g>
+          <g style="font-size:11px;fill:currentColor;opacity:0.7">
+            <text x="35"  y="167" text-anchor="end">~90 MYA</text>
+            <text x="65"  y="274" text-anchor="end">~87 MYA</text>
+            <text x="90"  y="373" text-anchor="end">~79 MYA</text>
+            <text x="115" y="461" text-anchor="end">~43 MYA</text>
+            <text x="138" y="557" text-anchor="end">~25 MYA</text>
+          </g>
+
+          <!-- GREY: root, mixed-lineage connectors, mouse branch, and pre-primate stem -->
+          <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" opacity="0.45">
+            <line x1="75"  y1="55"  x2="75"  y2="270"/>
+            <line x1="75"  y1="270" x2="105" y2="270"/>
+            <line x1="105" y1="270" x2="105" y2="369"/>
+            <line x1="105" y1="369" x2="130" y2="369"/>
+            <line x1="130" y1="369" x2="130" y2="457"/>
+            <line x1="130" y1="457" x2="155" y2="457"/>
+            <line x1="75"  y1="55"  x2="200" y2="55"/>
+          </g>
+
+          <!-- CORAL: euarchonta upper vertical (tree shrew side) + tree shrew terminal -->
+          <g fill="none" stroke="#D85A30" stroke-width="2.5" stroke-linecap="square">
+            <line x1="105" y1="170" x2="105" y2="270"/>
+            <line x1="105" y1="170" x2="200" y2="170"/>
+          </g>
+
+          <!-- AMBER: primatomorpha upper vertical (flying lemur side) + flying lemur terminal -->
+          <g fill="none" stroke="#C08000" stroke-width="2.5" stroke-linecap="square">
+            <line x1="130" y1="280" x2="130" y2="369"/>
+            <line x1="130" y1="280" x2="200" y2="280"/>
+          </g>
+
+          <!-- GREEN: primates only, starting at the primate common ancestor -->
+          <g fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="square">
+            <line x1="155" y1="360" x2="155" y2="553"/>
+            <line x1="155" y1="360" x2="200" y2="360"/>
+            <line x1="155" y1="553" x2="178" y2="553"/>
+            <line x1="178" y1="470" x2="178" y2="635"/>
+            <line x1="178" y1="470" x2="200" y2="470"/>
+            <line x1="178" y1="635" x2="200" y2="635"/>
+          </g>
+
+          <!-- Node dots -->
+          <circle cx="75"  cy="163" r="5" fill="#E24B4A"/>
+          <circle cx="105" cy="270" r="5" fill="#E24B4A"/>
+          <circle cx="130" cy="369" r="5" fill="#E24B4A"/>
+          <circle cx="155" cy="457" r="5" fill="#E24B4A"/>
+          <circle cx="178" cy="553" r="5" fill="#E24B4A"/>
+
+          <!-- Photos r=28; linked to detail sections below -->
+          <a href="#treeshrew" class="species-tree-link" aria-label="Jump to Tree shrew section">
+            <image href="img/species-img/treeshrew.png" x="196" y="142" width="56" height="56" clip-path="url(#cp-ts)" preserveAspectRatio="xMidYMid slice"/>
+            <circle cx="224" cy="170" r="28" fill="none" stroke="#D85A30" stroke-width="1.5"/>
+          </a>
+          <a href="#macaque" class="species-tree-link" aria-label="Jump to Rhesus macaque section">
+            <image href="img/species-img/macaque.png"   x="196" y="442" width="56" height="56" clip-path="url(#cp-mq)" preserveAspectRatio="xMidYMid slice"/>
+            <circle cx="224" cy="470" r="28" fill="none" stroke="#16A34A" stroke-width="1.5"/>
+          </a>
+          <a href="#human" class="species-tree-link" aria-label="Jump to Human section">
+            <image href="img/species-img/human.png"     x="196" y="607" width="56" height="56" clip-path="url(#cp-hm)" preserveAspectRatio="xMidYMid slice"/>
+            <circle cx="224" cy="635" r="28" fill="none" stroke="#16A34A" stroke-width="1.5"/>
+          </a>
+
+          <!-- Mouse -->
+          <text x="204" y="49"  style="font-size:14px;font-weight:500;fill:currentColor">Mus musculus</text>
+          <text x="204" y="67"  style="font-size:12px;fill:currentColor">Mouse (outgroup)</text>
+
+          <!-- Tree shrew -->
+          <text x="258" y="158" style="font-size:14px;font-weight:500;fill:currentColor">Tree shrew</text>
+          <text x="258" y="174" style="font-size:12px;font-style:italic;fill:currentColor">Tupaia belangeri</text>
+          <text x="258" y="190" style="font-size:12px;fill:#2563EB">+ Fast development</text>
+          <text x="258" y="206" style="font-size:12px;fill:#2563EB">+ Primate-adjacent, afoveate</text>
+          <text x="258" y="222" style="font-size:12px;fill:#b8112f">&#8722; Weaker human parallels</text>
+
+          <!-- Flying lemur -->
+          <text x="204" y="274" style="font-size:14px;font-weight:500;fill:currentColor">Cynocephalus volans</text>
+          <text x="204" y="292" style="font-size:12px;fill:currentColor">Flying lemur</text>
+
+          <!-- Marmoset -->
+          <text x="204" y="354" style="font-size:14px;font-weight:500;fill:currentColor">Callithrix jacchus</text>
+          <text x="204" y="372" style="font-size:12px;fill:currentColor">Marmoset</text>
+
+          <!-- Macaque -->
+          <text x="258" y="458" style="font-size:14px;font-weight:500;fill:currentColor">Rhesus macaque</text>
+          <text x="258" y="474" style="font-size:12px;font-style:italic;fill:currentColor">Macaca mulatta</text>
+          <text x="258" y="490" style="font-size:12px;fill:#2563EB">+ Closest primate model</text>
+          <text x="258" y="506" style="font-size:12px;fill:#2563EB">+ Full methods, dev control</text>
+          <text x="258" y="522" style="font-size:12px;fill:#b8112f">&#8722; Slow development</text>
+
+          <!-- Human -->
+          <text x="258" y="623" style="font-size:14px;font-weight:500;fill:currentColor">Human</text>
+          <text x="258" y="639" style="font-size:12px;font-style:italic;fill:currentColor">Homo sapiens</text>
+          <text x="258" y="655" style="font-size:12px;fill:#2563EB">+ Strong translational model</text>
+          <text x="258" y="671" style="font-size:12px;fill:#2563EB">+ Lifespan &amp; clinical studies</text>
+          <text x="258" y="687" style="font-size:12px;fill:#b8112f">&#8722; Non-invasive methods only</text>
+        </svg>
+      </div>
+    </div>
+
+    <hr class="divider" style="margin: 0;"/>
+
+    <!-- ── DETAILED SPECIES SECTIONS ─────────────────────────────── -->
+    <div id="species-list"></div>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/data.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

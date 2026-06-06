@@ -1,364 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Arcaro Lab at University of Pennsylvania. We study how intrinsic and experience-driven processes shape visual brain organization and perception across species using neuroimaging, electrophysiology, and behavior.">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Title -->
-    <title>Arcaro Lab | Visual Neuroscience at Penn</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
-
-    <!-- Core Stylesheet -->
-    <link href="style.css" rel="stylesheet">
-
-    <!-- Responsive CSS -->
-    <link href="css/responsive/responsive.css" rel="stylesheet">
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arcaro Lab — University of Pennsylvania</title>
+  <meta name="description" content="The Arcaro Lab studies how the visual brain is built — how a map-based architecture emerges, develops, and varies across species."/>
+  <link rel="icon" href="img/core-img/favicon.ico"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <!-- Avoid theme flash -->
+  <script>
+    (function(){var k='arcarolab-theme',s=localStorage.getItem(k),t=s||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();
+  </script>
+  <!-- Retro mode persistence: apply immediately to prevent flash -->
+  <script>
+    if (localStorage.getItem('retro_mode')) {
+      document.documentElement.classList.add('retro-pending');
+      var _rl = document.createElement('link');
+      _rl.rel = 'stylesheet';
+      _rl.href = 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap';
+      document.head.appendChild(_rl);
+    }
+  </script>
 </head>
+<body data-page="home">
 
-<body>
+  <!-- Preloader — two images alternate with rotate+flicker, matching arcarolab.org -->
+  <div id="preloader">
+    <img src="img/core-img/background0.png" alt="" class="loading-image" id="preloader-img1"/>
+    <img src="img/core-img/background1.png" alt="" class="loading-image" id="preloader-img2"/>
+  </div>
 
-    <img src="img/core-img/arcarolab_single.gif" alt="Arcaro Lab logo animation" class="index-logo">
+  <!-- Toolbar injected by JS -->
+  <div id="toolbar"></div>
 
-    <!-- Preloader Start -->
-    <div id="preloader">
-        <img src="img/core-img/background0.png" alt="Loading..." class="loading-image" id="image1">
-        <img src="img/core-img/background1.png" alt="Loading..." class="loading-image" id="image2">
-    </div>
+  <main>
 
-    <!-- ****** Header Area Start ****** -->
-    <header class="header_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="navbar navbar-expand-lg">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#yummyfood-nav" aria-controls="yummyfood-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i> Menu</button>
-                        <!-- Menu Area Start -->
-                        <div class="collapse navbar-collapse justify-content-center" id="yummyfood-nav">
-                            <ul class="navbar-nav" id="yummy-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="research.html">Research</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="people.html">People</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="publications.html">Publications</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://github.com/arcaro-lab">Github</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+    <!-- ── HERO ──────────────────────────────────────────────────── -->
+    <section class="hero" aria-label="Lab mission">
+      <img
+        class="hero-bg"
+        src="img/research-img/rainbowbrain.png"
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+      />
+      <div class="hero-fade-h" aria-hidden="true"></div>
+      <div class="hero-fade-v" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1>How does our environment guide neural development, and how does the emerging architecture support perception and behavior?</h1>
+        <p class="hero-body">
+          Our research combines neuroimaging, behavior, and electrophysiology to understand how intrinsic and experience-driven processes interact throughout development to shape brain organization and behavior. Our current focus is on neural development supporting visual object recognition across mammalian species.
+        </p>
+        <div class="hero-caption">
         </div>
-    </header>
-    <!-- ****** Header Area End ****** -->
+      </div>
+    </section>
 
-    <!-- Red bar -->
-    <div class="widget-title">
-        <h6></h6>
-    </div>
-
-    <div class="desktop-only">
-        <!-- ****** Welcome Post Area Start ****** -->
-        <section class="welcome-post-sliders owl-carousel">
-
-            <!-- Single Slide -->
-            <div class="welcome-single-slide">
-                <!-- Post Thumb -->
-                <img src="img/research-img/neonate_viscortex.jpg" alt="Functional organization of the human visual system at birth and across late gestation">
-                <!-- Overlay Text -->
-                <div class="project_title">
-                    <a href="https://www.cell.com/neuron/fulltext/S0896-6273(26)00267-9">
-                        <h5>Functional organization of the human visual system at birth and across late gestation. <br><br>Neuron</h5>
-                    </a>
-                </div>
-            </div>
-            <div class="welcome-single-slide">
-                <!-- Post Thumb -->
-                <img src="img/research-img/pulvinarscenes.png" alt="Natural scene processing in human pulvinar">
-                <!-- Overlay Text -->
-                <div class="project_title">
-                    <a href="https://www.nature.com/articles/s41467-025-67472-3">
-                        <h5>Processing of natural scenes in the human pulvinar. <br><br>Nature Communications</h5>
-                    </a>
-                </div>
-            </div>
-
-            <div class="welcome-single-slide">
-                <!-- Post Thumb -->
-                <img src="img/research-img/monami_fig.png" alt="Cortical maturation in macaques and humans">
-                <!-- Overlay Text -->
-                <div class="project_title">
-                    <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003378">
-                        <h5>Humans have a longer period of cortical maturation across depth and hierarchy than macaques. <br><br>PLOS Biology</h5>
-                    </a>
-                </div>
-            </div>
-
-            <div class="welcome-single-slide">
-                <!-- Post Thumb -->
-                <img src="img/research-img/visexpansion.png" alt="Evolution of primate visual cortex">
-                <!-- Overlay Text -->
-                <div class="project_title">
-                    <a href="https://www.pnas.org/doi/10.1073/pnas.2421585122">
-                        <h5>Expansion of a conserved architecture drives the evolution of primate visual cortex. <br><br>PNAS</h5>
-                    </a>
-                </div>
-            </div>
-
-            <div class="welcome-single-slide">
-                <!-- Post Thumb -->
-                <img src="img/research-img/neonatepulvinar.jpg" alt="Human neonate pulvinar connectivity">
-                <!-- Overlay Text -->
-                <div class="project_title">
-                    <a href="https://www.cell.com/current-biology/abstract/S0960-9822(24)01583-5">
-                        <h5>An intrinsic hierarchical, retinotopic organization of visual pulvinar connectivity in the human neonate. <br><br>Current Biology</h5>
-                    </a>
-                </div>
-            </div>
-
-            <div class="welcome-single-slide">
-                <!-- Post Thumb -->
-                <img src="img/research-img/histology.jpg" alt="Macaque face patch histology">
-                <!-- Overlay Text -->
-                <div class="project_title">
-                    <a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(24)01083-0">
-                        <h5>Inferotemporal face patches are histo-architectonically distinct. <br><br>Cell Reports</h5>
-                    </a>
-                </div>
-            </div>
-
-            <div class="welcome-single-slide">
-                <!-- Post Thumb -->
-                <img src="img/research-img/topographic.png" alt="Whole-brain topographic ontology">
-                <!-- Overlay Text -->
-                <div class="project_title">
-                    <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-neuro-082823-073701">
-                        <h5>A whole-brain topographic ontology. <br><br>Annual Reviews Neuroscience</h5>
-                    </a>
-                </div>
-            </div>
-
-            <div class="welcome-single-slide">
-                <!-- Post Thumb -->
-                <img src="img/research-img/NRP.jpg" alt="Face processing development framework">
-                <!-- Overlay Text -->
-                <div class="project_title">
-                    <a href="https://www.nature.com/articles/s44159-023-00152-5">
-                        <h5>A domain-relevant framework for the development of face processing. <br><br>Nature Reviews Psychology</h5>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Single Slide -->
-            <div class="welcome-single-slide">
-                <!-- Post Thumb -->
-                <img src="img/research-img/stuart_solo.png" alt="Face neurons research illustration">
-                <!-- Overlay Text -->
-                <div class="project_title">
-                    <a href="https://elifesciences.org/articles/53798">
-                        <h5>The neurons that mistook a hat for a face. <br><br>eLife</h5>
-                    </a>
-                </div>
-            </div>
-
-        </section>
-
-    </div>
-    <!-- ****** Mobile Featured Publications ****** -->
-    <div class="mobile-only mobile-featured">
-        <h3>Featured Publications</h3>
-        <ul class="mobile-pub-list">
-            <li><a href="https://www.cell.com/neuron/fulltext/S0896-6273(26)00267-9">Functional organization of the human visual system at birth and across late gestation - <em>Neuron</em></a></li>
-            <li><a href="https://www.nature.com/articles/s41467-025-67472-3">Processing of natural scenes in the human pulvinar - <em>Nature Communications</em></a></li>
-            <li><a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003378">Humans have a longer period of cortical maturation across depth and hierarchy than macaques - <em>PLOS Biology</em></a></li>
-            <li><a href="https://www.pnas.org/doi/10.1073/pnas.2421585122">Expansion of a conserved architecture drives the evolution of primate visual cortex - <em>PNAS</em></a></li>
-            <li><a href="https://www.cell.com/current-biology/abstract/S0960-9822(24)01583-5">An intrinsic hierarchical, retinotopic organization of visual pulvinar connectivity in the human neonate - <em>Current Biology</em></a></li>
-            <li><a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(24)01083-0">Inferotemporal face patches are histo-architectonically distinct - <em>Cell Reports</em></a></li>
-        </ul>
-    </div>
-    <!-- ****** Welcome Area End ****** -->
-
-
-    <!-- Red bar -->
-    <div class="widget-title">
-        <h6></h6>
-    </div>
-
-
-    <!-- Main content and scrolling text container wrapped in a flex container -->
-    <div class="content-container">
-        <!-- Main content area -->
-        <div class="main-content-area">
-
-            <p class="hero-text"><b>How does our environment guide neural development, and how does the emerging neural architecture support perception and behavior?</b></p>
-
-            <p class="body-text">Our research combines neuroimaging, behavior, and electrophysiology to understand how intrinsic and experience-driven processes interact throughout development to shape brain organization and behavior. Our current focus is on neural development supporting visual object recognition across mammalian species.</p>
-
-            <div class="content-divider"></div>
-
-            <p class="body-text">The lab is part of the Thalamus Conte Center aimed at advancing our understanding on the role of higher order thalamus on cognition.</p>
-            <p class="body-text"><a href="https://conte.thalamus.princeton.edu/">Check out the project and the fantastic group of investigators involved!</a></p>
-
-            <div class="content-divider"></div>
-
+    <!-- ── PAPER CAROUSEL ────────────────────────────────────────── -->
+    <section class="carousel-section" aria-label="Recent papers">
+      <div class="carousel-header">
+        <h2>Recent papers</h2>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="carousel-up"   aria-label="Up">↑</button>
+          <button class="carousel-btn" id="carousel-down" aria-label="Down">↓</button>
+          <button class="carousel-btn prev" id="carousel-prev" aria-label="Previous paper">&larr;</button>
+          <button class="carousel-btn next" id="carousel-next" aria-label="Next paper">&rarr;</button>
+          <a href="publications.html" class="carousel-link">All publications &rarr;</a>
         </div>
+      </div>
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carousel-track"></div>
+      </div>
+      <div class="carousel-dots" id="carousel-dots" aria-hidden="true"></div>
+    </section>
 
-        <!-- Vertical line to separate the right column -->
-        <div class="vertical-separator"></div>
+    <hr class="divider"/>
 
-        <!-- Right-side column for Lab News with auto-scroll -->
-        <div class="right-side-column">
-            <h2>Lab News</h2>
-            <!-- Auto-scrolling container for Lab News sections -->
-            <div id="auto-scroll-container">
-                <div id="scroll-content">
-                    <!-- Scrollable content, duplicated for a seamless loop -->
-                    <section class="news-item">
-                        <p>Please stand by ...</p>
-                    </section>
-                    <section class="news-item">
-                        <p>April 2026. Big congrats to Jess on winning Penn’s Eliot Stellar Prize for her outstanding honors thesis on tree shrew object recognition behavior. <a href=""></a></p>
-                    </section>
-                    <section class="news-item">
-                        <p>April 2026. Big congrats to Vlad on his paper on the development oe neonate visual cortex. <a href="https://www.cell.com/neuron/fulltext/S0896-6273(26)00267-9">Out now in Neuron!</a></p>
-                    </section>
-                    <section class="news-item">
-                        <p>Dec 2025. Big congrats to Danny on his paper on natural scene processing in the human pulvinar. <a href="https://www.nature.com/articles/s41467-025-67472-3">Out now in Nature Communications!</a></p>
-                    </section>
-                    <section class="news-item">
-                        <p>Sept 2025. Big congrats to Monami on her paper mapping inside-out development of myelination in macaques and humans. <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003378">Out now in PLOS Biology!</a></p>
-                    </section>
-                    <section class="news-item">
-                        <p>Jan 2025. Big congrats to Emily on her paper assessing the evolution of primate visual cortex. <a href="https://www.pnas.org/doi/10.1073/pnas.2421585122">Out now in PNAS!</a></p>
-                    </section>
-                    <section class="news-item">
-                        <p>Dec 2024. Big congrats to Vlad on his paper mapping the human neonate pulvinar. <a href="https://www.cell.com/current-biology/abstract/S0960-9822(24)01583-5">Out now in Current Biology!</a></p>
-                    </section>
-                    <section class="news-item">
-                        <p>Sept 2024. Big congrats to Hiroki on his macaque face patch histology paper. <a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(24)01083-0">Out now in Cell Reports!</a></p>
-                    </section>
-                    <section class="news-item">
-                        <p>Jan 2024. Perspective piece on the universality of topographic brain maps. <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-neuro-082823-073701?journalCode=neuro">Out now in Annual Reviews Neuroscience!</a></p>
-                    </section>
-                    <section class="news-item">
-                        <p>Jan 2024. The lab has received a <a href="http://whitehall.org/about/">Whitehall Foundation</a> grant to study neuroanatomical constraints on the development of visual domains.</p>
-                    </section>
-                    <section class="news-item">
-                        <p>Oct 2023. The lab welcomes our new postdoc, Xingyu Liu!</p>
-                    </section>
-                    <!-- Repeat the content for the loop -->
-                    <section class="news-item">
-                        <p>Oct 2023. The lab welcomes our new postdoc, Vlad Ayzenberg!</p>
-                    </section>
-                    <section class="news-item">
-                        <p>April 2023. The lab is thrilled to be part of the <a href="https://conte.thalamus.princeton.edu/">Thalamus Conte Center</a> where we will study thalamocortical cognitive networks in the healthy human brain.</p>
-                    </section>
-                    <section class="news-item">
-                        <p>Feb 2023. <a href="https://www.nature.com/articles/s44159-023-00152-5">New paper in Nature Reviews Psychology!</a></p>
-                    </section>
-                    <section class="news-item">
-                        <p>END OF TRANSMISSION</p>
-                        <div class="transmission-lines">
-                            <div class="line line-100"></div>
-                            <div class="line line-75"></div>
-                            <div class="line line-56"></div>
-                            <div class="line line-42"></div>
-                            <div class="line line-32"></div>
-                        </div>
-                    </section>
-                </div>
-            </div>
+    <!-- ── LAB NEWS + CONTE ──────────────────────────────────────── -->
+    <section class="news-conte" aria-label="Lab news and affiliations">
+      <div>
+        <h2>Lab News</h2>
+        <!-- overflow:hidden container; JS animates scrollTop for continuous scroll -->
+        <div class="news-scroll" id="news-scroll">
+          <div id="news-scroll-inner"></div>
         </div>
-
-    </div>
-
-
-    <!-- ****** Footer Menu Area Start ****** -->
-    <footer class="footer_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="footer-content">
-                        <!-- Logo Area Start -->
-                        <div class="footer-logo-area text-center">
-                            <img src="img/core-img/pennlogo.jpg" alt="Penn Logo" class="footer-logo">
-                        </div>
-                        <p class="footer-link"><a href="https://www.upenn.edu/" target="_blank" rel="noopener noreferrer">University of Pennsylvania</a></p>
-                        <p class="footer-link-dense"><a href="https://psychology.sas.upenn.edu/" target="_blank" rel="noopener noreferrer">Department of Psychology</a></p>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <aside>
+        <div class="conte-card">
+          <div class="label label-red" style="margin-bottom:14px;">Affiliated program</div>
+          <div class="conte-title">Thalamus Conte Center</div>
+          <p class="conte-body">
+            The lab is part of the Thalamus Conte Center, advancing our understanding of the role of higher-order thalamus in cognition.
+          </p>
+          <a class="conte-link" href="https://conte.thalamus.princeton.edu" target="_blank" rel="noopener noreferrer">
+            conte.thalamus.princeton.edu &rarr;
+          </a>
         </div>
-    </footer>
+      </aside>
+    </section>
 
+  </main>
 
-    <!-- Script for auto-scrolling -->
-    <script>
-        const scrollContainer = document.getElementById('auto-scroll-container');
-        const scrollContent = document.getElementById('scroll-content').innerHTML;  // Grab the original content
-        scrollContainer.innerHTML += scrollContainer.innerHTML;  // Duplicate the content for scrolling
+  <div id="footer-placeholder"></div>
 
-        let startPos = 0;
-        const speed = .25;  // Adjust the speed as needed
-
-        function autoScroll() {
-            if (startPos >= scrollContainer.scrollHeight / 2) {
-                startPos = 0;  // Reset to top when halfway through the content
-            }
-            startPos += speed;
-            scrollContainer.scrollTop = startPos;
-            window.requestAnimationFrame(autoScroll);
-        }
-
-        autoScroll();  // Initialize auto-scrolling
-    </script>
-
-
-    <!-- Script Tags Including jQuery, Popper, Bootstrap, and Other Plugins -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <script src="js/bootstrap/popper.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <script src="js/others/plugins.js"></script>
-    <script src="js/active.js"></script>
-
-    <script>
-        window.onload = function() {
-            var redBarWidth = document.querySelector('.widget-title h6').offsetWidth;
-            var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-            var fontScaling = 42; // Adjust this value as needed
-
-            // Calculate font size based on red bar width and font scaling factor
-            var fontSize = redBarWidth / fontScaling;
-
-            // Apply the calculated font size to each nav link
-            navLinks.forEach(function(link) {
-                link.style.fontSize = fontSize + 'px';
-            });
-
-            // Re-adjust font size on window resize
-            window.addEventListener('resize', function() {
-                redBarWidth = document.querySelector('.widget-title h6').offsetWidth;
-                fontSize = redBarWidth / fontScaling;
-                navLinks.forEach(function(link) {
-                    link.style.fontSize = fontSize + 'px';
-                });
-            });
-        };
-    </script>
+  <script src="js/data.js"></script>
+  <script src="js/site.js"></script>
 </body>
-
 </html>
