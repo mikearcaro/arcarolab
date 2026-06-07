@@ -213,12 +213,15 @@ const OPENSCIENCE_PROJECTS = [
     links: [{ label: 'Documentation', href: 'https://brainana.readthedocs.io/en/latest/index.html' }],
   },
   {
+
     id: 'shrewModularbox', title: 'ModularShrewBox',
     tagline: 'A low-cost, modular behavior box for visual experiments in small animals.',
     description: 'Designed for tree shrews and other small animals. Stepper-motor reward pumps, adjustable monitor mount, capacitive touch pads, and an onboard Raspberry Pi. Laser-cut and 3D-printable, daisy-chainable, and driven by Python/PsychoPy.',
+    note: 'We are updating some components to the box. If interested in building, please reach out for guidance.',
     img: 'https://raw.githubusercontent.com/arcaro-lab/ShrewBox/main/Pictures/behaviorbox.png',
     imgAlt: 'ShrewBox behavior apparatus',
     links: [{ label: 'GitHub Repository', href: 'https://github.com/arcaro-lab/ShrewBox' }],
+
   },
   {
     id: 'shrew3Dbox', title: '3D In-Cage Display',
@@ -226,7 +229,7 @@ const OPENSCIENCE_PROJECTS = [
     description: 'Designed for tree shrews and other small animals. Dual display leveraging the Pepper\'s Ghost illusion for a holographic-like display, and an onboard Raspberry Pi for visual stimulus delivery.',
     img: 'img/research-img/DesignV5v5.png',
     imgAlt: '3D in-cage display apparatus',
-    links: [{ label: 'GitHub Repository', href: 'https://github.com/arcaro-lab/Hologram' }],
+    links: [{ label: 'GitHub Repository - Coming Soon', href: '' }],
   },
   {
     id: 'brainmaps', title: 'BrainMaps',

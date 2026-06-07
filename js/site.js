@@ -505,7 +505,7 @@ function initOpenScience() {
         <div>
           <h2>${escHtml(p.title)}</h2>
           <div class="project-tagline">${escHtml(p.tagline)}</div>
-          <p class="project-desc">${escHtml(p.description)}</p>
+          <p class="project-desc">${escHtml(p.description)}</p>\n          ${p.note ? `<p class="project-desc" style="margin-top:12px;font-weight:600;">${escHtml(p.note)}</p>` : ''}
           <div class="project-links">${linksHtml}</div>
         </div>
         <div>${mediaHtml}</div>
