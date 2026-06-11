@@ -7,7 +7,7 @@ const PEOPLE_IMG = 'https://www.arcarolab.org/img/people-img/';
 const PREPRINTS = [
   { author: 'Liu X, Zhang Y, Yin Z, Zhen Z, Arcaro MJ', title: 'Brainana: an end-to-end preprocessing framework for macaque neuroimaging', venue: 'bioRxiv', href: 'https://www.biorxiv.org/content/10.64898/2026.06.03.729972v1' },
   { author: 'Meyer EE, Ong WS, Cottaris NP, Zhang L, Collina J, Brainard DH, Arcaro MJ', title: 'Transformation-tolerant object recognition in tree shrews despite lacking a fovea', venue: 'bioRxiv', href: 'https://www.biorxiv.org/content/10.64898/2026.04.10.717715v1' },
-  { author: 'Kim H, Arcaro MJ, Imam N', title: 'Geometric constraints in the development of primate extrastriate visual cortex', venue: 'bioRxiv', href: 'https://www.biorxiv.org/content/10.64898/2026.03.27.714739v1' },
+  { author: 'Kim H, Arcaro MJ, Imam N', title: 'Geometric constraints in the development of primate extrastriate visual cortex', venue: 'bioRxiv', href: 'https://www.biorxiv.org/content/10.64898/2026.02.04.703881v1' },
   { author: 'Ellwood-Lowe ME, Nishio M, Dufford AJ, Arcaro MJ, Satterthwaite TD, Mackey AP', title: 'Cascading periods of language-related brain plasticity across early childhood', venue: 'bioRxiv', href: 'https://www.biorxiv.org/content/10.1101/2025.09.27.678945v1' },
 ];
 
