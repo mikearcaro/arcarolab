@@ -753,7 +753,8 @@ function escHtml(str) {
   // from the CSS pixelation below so the hand-made art shows as-is.
   const EIGHTBIT_BASENAMES = [
     'Arcaro', 'xingyu', 'DianaKing', 'MeyerE', 'Monami', 'Reyansh',
-    'Romero_Camila', 'rainbowbrain'
+    'Romero_Camila', 'rainbowbrain',
+    'human', 'macaque', 'treeshrew'
   ];
 
   function eightBitVariant(src) {
@@ -769,6 +770,7 @@ function escHtml(str) {
   }
 
   function swapToEightBit() {
+    // Regular <img> elements use src.
     document.querySelectorAll('img').forEach(img => {
       if (img.dataset.eightbitSwapped) return;
       const orig = img.getAttribute('src');
@@ -778,15 +780,29 @@ function escHtml(str) {
       img.dataset.eightbitOrigSrc = orig;
       img.setAttribute('src', variant);
     });
+    // SVG <image> elements use href (and/or legacy xlink:href).
+    document.querySelectorAll('image').forEach(el => {
+      if (el.dataset.eightbitSwapped) return;
+      const attr = el.hasAttribute('href') ? 'href' : 'xlink:href';
+      const orig = el.getAttribute('href') || el.getAttribute('xlink:href');
+      const variant = eightBitVariant(orig);
+      if (!variant) return;
+      el.dataset.eightbitSwapped = '1';
+      el.dataset.eightbitOrigSrc = orig;
+      el.dataset.eightbitAttr = attr;
+      el.setAttribute(attr, variant);
+    });
   }
 
   function restoreEightBit() {
-    document.querySelectorAll('img[data-eightbit-swapped]').forEach(img => {
-      if (img.dataset.eightbitOrigSrc != null) {
-        img.setAttribute('src', img.dataset.eightbitOrigSrc);
+    document.querySelectorAll('[data-eightbit-swapped]').forEach(el => {
+      if (el.dataset.eightbitOrigSrc != null) {
+        const attr = el.dataset.eightbitAttr || 'src';
+        el.setAttribute(attr, el.dataset.eightbitOrigSrc);
       }
-      delete img.dataset.eightbitSwapped;
-      delete img.dataset.eightbitOrigSrc;
+      delete el.dataset.eightbitSwapped;
+      delete el.dataset.eightbitOrigSrc;
+      delete el.dataset.eightbitAttr;
     });
   }
 
