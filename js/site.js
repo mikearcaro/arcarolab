@@ -505,7 +505,7 @@ function initOpenScience() {
         <div>
           <h2>${escHtml(p.title)}</h2>
           <div class="project-tagline">${escHtml(p.tagline)}</div>
-          <p class="project-desc">${escHtml(p.description)}</p>\n          ${p.note ? `<p class="project-desc" style="margin-top:12px;font-weight:600;">${escHtml(p.note)}</p>` : ''}
+          <p class="project-desc">${escHtml(p.description)}</p>
           <div class="project-links">${linksHtml}</div>
         </div>
         <div>${mediaHtml}</div>
@@ -546,6 +546,7 @@ function initSpecies() {
     return '<section class="species-section' + (reverse ? ' reverse' : '') + '" id="' + sp.id + '">'
       + '<div class="species-grid">'
       + '<div>'
+      + '<div class="species-label">' + String(i + 1).padStart(2, '0') + '</div>'
       + '<h2 class="species-name">' + escHtml(sp.commonName) + '</h2>'
       + '<div class="species-latin">' + escHtml(sp.latinName) + '</div>'
       + '<p class="species-why">' + escHtml(sp.labWork) + '</p>'
@@ -726,6 +727,7 @@ function escHtml(str) {
       setTimeout(() => {
         boot.remove();
         document.body.classList.add('retro-mode');
+        swapToEightBit();
         pixelateImages();
       }, 400);
     }
@@ -740,7 +742,52 @@ function escHtml(str) {
     chiptune(JINGLE_OFF);
     document.body.classList.remove('retro-mode');
     restoreImages();
+    restoreEightBit();
     localStorage.removeItem('retro_mode');
+  }
+
+  // ── 8-bit image swap — use hand-made *_8bit variants where they exist ─────
+  // For the people photos and the rainbowbrain hero we have pre-made 8-bit
+  // versions (filename + "_8bit"). In retro mode we swap the <img> src to the
+  // _8bit file; on exit we restore the original. These images are excluded
+  // from the CSS pixelation below so the hand-made art shows as-is.
+  const EIGHTBIT_BASENAMES = [
+    'Arcaro', 'xingyu', 'DianaKing', 'MeyerE', 'Monami', 'Reyansh',
+    'Romero_Camila', 'rainbowbrain'
+  ];
+
+  function eightBitVariant(src) {
+    if (!src) return null;
+    // Split off any query/hash, operate on the path only.
+    const m = src.match(/^([^?#]*?)(\.[a-zA-Z0-9]+)([?#].*)?$/);
+    if (!m) return null;
+    const [, pathNoExt, ext, tail = ''] = m;
+    if (/_8bit$/.test(pathNoExt)) return null; // already 8-bit
+    const base = pathNoExt.split('/').pop();
+    if (!EIGHTBIT_BASENAMES.includes(base)) return null;
+    return pathNoExt + '_8bit' + ext + tail;
+  }
+
+  function swapToEightBit() {
+    document.querySelectorAll('img').forEach(img => {
+      if (img.dataset.eightbitSwapped) return;
+      const orig = img.getAttribute('src');
+      const variant = eightBitVariant(orig);
+      if (!variant) return;
+      img.dataset.eightbitSwapped = '1';
+      img.dataset.eightbitOrigSrc = orig;
+      img.setAttribute('src', variant);
+    });
+  }
+
+  function restoreEightBit() {
+    document.querySelectorAll('img[data-eightbit-swapped]').forEach(img => {
+      if (img.dataset.eightbitOrigSrc != null) {
+        img.setAttribute('src', img.dataset.eightbitOrigSrc);
+      }
+      delete img.dataset.eightbitSwapped;
+      delete img.dataset.eightbitOrigSrc;
+    });
   }
 
   // ── Image pixelation — pure CSS transform, no canvas, no CORS ─────────────
@@ -755,6 +802,8 @@ function escHtml(str) {
                 '.research-media-wrap img, .project-media img';
     document.querySelectorAll(sel).forEach(img => {
       if (img.dataset.retroPixelated) return;
+      // Hand-made 8-bit versions are swapped in directly; don't CSS-pixelate them.
+      if (img.dataset.eightbitSwapped) return;
 
       const box = img.parentElement;
       const cw  = box.clientWidth;
@@ -808,6 +857,9 @@ function escHtml(str) {
       document.body.classList.add('retro-mode');
     });
     // Pixelate after images are loaded (no boot screen, no jingle on navigation)
-    window.addEventListener('load', () => setTimeout(pixelateImages, 200));
+    window.addEventListener('load', () => setTimeout(() => {
+      swapToEightBit();
+      pixelateImages();
+    }, 200));
   }
 })();
