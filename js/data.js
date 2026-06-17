@@ -13,6 +13,7 @@ const PREPRINTS = [
 
 // Carousel papers — exactly matching current arcarolab.org homepage slides, in order
 const CAROUSEL_PAPERS = [
+  { img: IMG+'PLOSBioMetabolicEccen.png', year:'2026', journal:'PLOS Biology',            author:'Oishi H, Berezovskii VK, Livingstone MS, Weiner KS, Arcaro MJ', title:'Metabolic organization of macaque visual cortex reflects visual field topography and perceptual specialization', href:'https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003847' },
   { img: IMG+'neonate_viscortex.jpg', year:'2026', journal:'Neuron',                      author:'Ayzenberg V & Arcaro MJ',                        title:'Functional organization of the human visual system at birth and across late gestation',              href:'https://www.cell.com/neuron/fulltext/S0896-6273(26)00267-9' },
   { img: IMG+'pulvinarscenes.png',    year:'2026', journal:'Nature Communications',         author:'Guest DR, Allen EJ, Kay KN, Arcaro MJ',          title:'Processing of natural scenes in the human pulvinar',                                                href:'https://www.nature.com/articles/s41467-025-67472-3' },
   { img: IMG+'monami_fig.png',        year:'2025', journal:'PLOS Biology',                  author:'Nishio M, Liu X, Mackey AP, Arcaro MJ',          title:'Humans have a longer period of cortical maturation across depth and hierarchy than macaques',       href:'https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003378' },
