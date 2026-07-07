@@ -110,6 +110,7 @@ const PUBLICATIONS = [
 ];
 
 const NEWS = [
+  { date: 'June 2026', body: 'Big congrats to Hiroki on his macaque eccentricity histology paper. Out now in PLOS Biology!', link: 'https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003847' },
   { date: 'Apr 2026', body: 'Big congrats to Jess on winning Penn\u2019s Eliot Stellar Prize for her honors thesis on tree shrew object recognition behavior.' },
   { date: 'Apr 2026', body: 'Big congrats to Vlad on his paper on the development of neonate visual cortex. Out now in Neuron!', link: 'https://www.cell.com/neuron/fulltext/S0896-6273(26)00267-9' },
   { date: 'Dec 2025', body: 'Big congrats to Danny on his paper on natural scene processing in the human pulvinar. Out now in Nature Communications!', link: 'https://www.nature.com/articles/s41467-025-67472-3' },
@@ -137,7 +138,7 @@ const PI = {
 
 const LAB_MEMBERS = [
   PI,
-  { name: 'Xingyu Liu',           role: 'Postdoctoral Researcher', img: PEOPLE_IMG + 'xingyu.jpg',      links: [{ label: 'Twitter', href: 'https://twitter.com/liaobuzhinanbei' }, { label: 'Scholar', href: 'https://scholar.google.com/citations?user=gz-estEAAAAJ&hl=en' }] },
+  { name: 'Xingyu Liu',           role: 'Postdoctoral Researcher', img: PEOPLE_IMG + 'xingyu.jpg',      links: [{ label: 'Scholar', href: 'https://scholar.google.com/citations?user=gz-estEAAAAJ&hl=en' }] },
   { name: 'Diana King',           role: 'Graduate Student',        img: PEOPLE_IMG + 'DianaKing.jpg',    links: [{ label: 'CV', href: 'https://www.arcarolab.org/pdf/labfiles/Diana_CV.pdf' }] },
   { name: 'Emily Meyer',          role: 'Graduate Student',        img: PEOPLE_IMG + 'MeyerE.jpg',       links: [{ label: 'Bluesky', href: 'https://bsky.app/profile/emilymeyer.bsky.social' }] },
   { name: 'Monami Nishio',        role: 'Graduate Student',        note: 'co-advised with Dr. Allyson Mackey', img: PEOPLE_IMG + 'Monami.jpg', links: [{ label: 'CV', href: 'https://www.arcarolab.org/pdf/labfiles/20250828CV_MonamiNishio.pdf' }] },
@@ -173,9 +174,9 @@ const RESEARCH_THEMES = [
     headline: 'How is the visual brain organized, from cortex to thalamus?',
     body: 'Topographic maps are a central organizing principle of the visual brain. Retinotopic organization pervades not only visual cortex but also subcortical structures like the pulvinar, extending the reach of cortical organizing principles into thalamus. Using naturalistic stimuli, we have identified pulvinar regions selective for faces and bodies that are co-active with corresponding cortical areas during natural scene viewing. Functional clustering and hierarchical structure manifest in subcortex just as they do in cortex. Functional domains emerge within this map-based architecture, and they are architectonically distinct: face-selective patches show unique microstructural properties. This shared topographic framework provides a basis for understanding how the brain processes information and establishes functional homologies across primate species.',
     pubs: [
-      { author: 'Guest DR et al.',             year: 2026, title: 'Processing of natural scenes in the human pulvinar',              journal: 'Nature Communications',        href: 'https://www.nature.com/articles/s41467-025-67472-3' },
+      { author: 'Guest DR, Allen EJ, Kay KN, Arcaro MJ',             year: 2026, title: 'Processing of natural scenes in the human pulvinar',              journal: 'Nature Communications',        href: 'https://www.nature.com/articles/s41467-025-67472-3' },
       { author: 'Arcaro MJ & Livingstone MS',  year: 2024, title: 'A whole-brain topographic ontology',                             journal: 'Annual Reviews Neuroscience',   href: 'https://www.annualreviews.org/doi/abs/10.1146/annurev-neuro-082823-073701' },
-      { author: 'Oishi H et al.',              year: 2024, title: 'Inferotemporal face patches are histo-architectonically distinct', journal: 'Cell Reports',                  href: 'https://www.cell.com/cell-reports/fulltext/S2211-1247(24)01083-0' },
+      { author: 'Oishi H, Berezovskii VK, Livingstone MS, Weiner KS, Arcaro MJ',              year: 2024, title: 'Inferotemporal face patches are histo-architectonically distinct', journal: 'Cell Reports',                  href: 'https://www.cell.com/cell-reports/fulltext/S2211-1247(24)01083-0' },
     ],
     media: { kind: 'image', src: IMG + 'maps.png', alt: 'Retinotopic maps throughout the primate visual system', caption: 'Retinotopic maps throughout the primate visual system.' },
   },
@@ -185,9 +186,9 @@ const RESEARCH_THEMES = [
     body: 'The newborn brain is not a blank slate: major pathways, maps, and thalamo-cortical connections are already in place early in life. But early organization is not the same as adult organization. Visual systems continue to mature as brain circuits grow, experience accumulates, and behavior changes. Our work asks how early-developing architecture constrains later specialization, and how experience refines visual pathways across infancy, childhood, and adulthood.',
     pubs: [
       { author: 'Ayzenberg V & Arcaro MJ',   year: 2026, title: 'Functional organization of the human visual system at birth and across late gestation', journal: 'Neuron',            href: 'https://www.sciencedirect.com/science/article/pii/S0896627326002679' },
-      { author: 'Ayzenberg V et al.',   year: 2025, title: 'An intrinsic hierarchical, retinotopic organization of visual pulvinar connectivity in the human neonate', journal: 'Current Biology',            href: 'https://www.cell.com/current-biology/abstract/S0960-9822(24)01583-5' },
+      { author: 'Ayzenberg V, Song C, Arcaro MJ',   year: 2025, title: 'An intrinsic hierarchical, retinotopic organization of visual pulvinar connectivity in the human neonate', journal: 'Current Biology',            href: 'https://www.cell.com/current-biology/abstract/S0960-9822(24)01583-5' },
       { author: 'Scott LS & Arcaro MJ', year: 2023, title: 'A domain-relevant framework for the development of face processing',                                       journal: 'Nature Reviews Psychology',  href: 'https://www.nature.com/articles/s44159-023-00152-5' },
-      { author: 'Arcaro MJ et al.',     year: 2017, title: 'Seeing faces is necessary for face-domain formation',                                                       journal: 'Nature Neuroscience',        href: 'https://www.nature.com/articles/nn.4635' },
+      { author: 'Arcaro MJ, Schade PF*, Vincent JL, Ponce CR, Livingstone MS',     year: 2017, title: 'Seeing faces is necessary for face-domain formation',                                                       journal: 'Nature Neuroscience',        href: 'https://www.nature.com/articles/nn.4635' },
     ],
     media: { kind: 'video', src: 'https://www.arcarolab.org/img/research-img/BrainMaps.mp4', poster: IMG + 'neonate_viscortex.jpg', caption: 'Emergence of cortical maps across development.' },
   },
@@ -196,9 +197,9 @@ const RESEARCH_THEMES = [
     headline: 'How has evolution modified a conserved visual system architecture across primates?',
     body: 'Humans and other primates share core principles of visual system organization, including topographic maps, hierarchical pathways, and links between anatomical structure and functional representation. Yet these shared principles are not implemented identically across species. Visual areas can expand, anatomical landmarks can correspond to different functional representations, and developmental programs can unfold over different timelines. Our work uses comparative neuroimaging, anatomy, and developmental analyses to ask which features of visual system organization are conserved across primates, and which have been modified in humans.',
     pubs: [
-      { author: 'Meyer E et al.',              year: 2025, title: 'Expansion of a conserved architecture drives the evolution of primate visual cortex',                  journal: 'PNAS',                        href: 'https://www.pnas.org/doi/10.1073/pnas.2421585122' },
-      { author: 'Nishio M et al.',             year: 2025, title: 'Humans have a longer period of cortical maturation across depth and hierarchy than macaques',          journal: 'PLOS Biology',                href: 'https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003378' },
-      { author: 'Arcaro MJ et al.',             year: 2022, title: 'The retrocalcarine sulcus maps different retinotopic representations in macaques and humans',          journal: 'Brain Structure and Function', href: 'https://link.springer.com/article/10.1007/s00429-021-02427-0' },
+      { author: 'Meyer E, Martynek M, Kastner S, Livingstone MS, Arcaro MJ',              year: 2025, title: 'Expansion of a conserved architecture drives the evolution of primate visual cortex',                  journal: 'PNAS',                        href: 'https://www.pnas.org/doi/10.1073/pnas.2421585122' },
+      { author: 'Nishio M, Liu X, Mackey AP, Arcaro MJ',             year: 2025, title: 'Humans have a longer period of cortical maturation across depth and hierarchy than macaques',          journal: 'PLOS Biology',                href: 'https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003378' },
+      { author: 'Arcaro MJ, Livingstone MS, Kay KN, Weiner KS',             year: 2022, title: 'The retrocalcarine sulcus maps different retinotopic representations in macaques and humans',          journal: 'Brain Structure and Function', href: 'https://link.springer.com/article/10.1007/s00429-021-02427-0' },
     ],
     media: { kind: 'image', src: IMG + 'humanmacaque.jpg', alt: 'Cross-species visual system comparison', caption: 'Cross-species comparison of primate visual cortex.' },
   },
@@ -360,8 +361,8 @@ const SPECIES = [
     labWork: "The lab's macaque work has focused on the relationship between retinotopic map organization and higher-level functional domains, particularly face- and body-selective patches in inferotemporal cortex. We have shown that these domains are architectonically distinct from surrounding cortex, that their locations are predictable from sulcal morphology, and that visual experience during development is necessary for their formation. More recent work examines how cortical maturation proceeds across the hierarchy in macaques compared to humans, and characterizes the evolution of visual cortex organization across primate species.",
     papers: [
       { author: 'Oishi H, Berezovskii VK, Livingstone MS, Weiner KS, Arcaro MJ', year: 2026, title: 'Metabolic organization of macaque visual cortex reflects retinotopic eccentricity and category selectivity', journal: 'PLOS Biology', href: 'https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003847' },
-      { author: 'Oishi H et al.', year: 2024, title: 'Inferotemporal face patches are histo-architectonically distinct', journal: 'Cell Reports', href: 'https://www.cell.com/cell-reports/fulltext/S2211-1247(24)01083-0' },
-      { author: 'Meyer E et al.', year: 2025, title: 'Expansion of a conserved architecture drives the evolution of primate visual cortex', journal: 'PNAS', href: 'https://www.pnas.org/doi/10.1073/pnas.2421585122' },
+      { author: 'Oishi H, Berezovskii VK, Livingstone MS, Weiner KS, Arcaro MJ', year: 2024, title: 'Inferotemporal face patches are histo-architectonically distinct', journal: 'Cell Reports', href: 'https://www.cell.com/cell-reports/fulltext/S2211-1247(24)01083-0' },
+      { author: 'Meyer E, Martynek M, Kastner S, Livingstone MS, Arcaro MJ', year: 2025, title: 'Expansion of a conserved architecture drives the evolution of primate visual cortex', journal: 'PNAS', href: 'https://www.pnas.org/doi/10.1073/pnas.2421585122' },
     ],
   },
   {
@@ -376,7 +377,7 @@ const SPECIES = [
     questions: "Can high-level visual categorization and object recognition emerge without a fovea? Which aspects of visual system organization are shared across tree shrews and primates, and which depend on primate-specific specializations?",
     labWork: "Tree shrews let us ask which features of high-level vision are specific to primates and which reflect broader principles of mammalian visual system organization. They are close relatives of primates with an organized visual cortex, but unlike humans and macaques they lack a fovea and have coarser visual acuity. This combination allows us to test whether sophisticated visual abilities require primate-like visual precision, or whether they can emerge from a compact visual system organized around similar computational principles. Our work examines how tree shrews recognize objects, generalize across visual change, and flexibly use different kinds of visual information as task demands change.",
     papers: [
-      { author: 'Meyer EE et al.', year: 2026, title: 'Transformation-tolerant object recognition in tree shrews despite lacking a fovea', journal: 'bioRxiv', href: 'https://www.biorxiv.org/content/10.64898/2026.04.10.717715v1' },
+      { author: 'Meyer EE, Ong WS, Cottaris NP, Zhang L, Collina J, Brainard DH, Arcaro MJ', year: 2026, title: 'Transformation-tolerant object recognition in tree shrews despite lacking a fovea', journal: 'bioRxiv', href: 'https://www.biorxiv.org/content/10.64898/2026.04.10.717715v1' },
       
     ],
   },
