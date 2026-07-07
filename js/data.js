@@ -8,7 +8,6 @@ const PREPRINTS = [
   { author: 'Liu X, Zhang Y, Yin Z, Zhen Z, Arcaro MJ', title: 'Brainana: an end-to-end preprocessing framework for macaque neuroimaging', venue: 'bioRxiv', href: 'https://www.biorxiv.org/content/10.64898/2026.06.03.729972v1' },
   { author: 'Meyer EE, Ong WS, Cottaris NP, Zhang L, Collina J, Brainard DH, Arcaro MJ', title: 'Transformation-tolerant object recognition in tree shrews despite lacking a fovea', venue: 'bioRxiv', href: 'https://www.biorxiv.org/content/10.64898/2026.04.10.717715v1' },
   { author: 'Kim H, Arcaro MJ, Imam N', title: 'Geometric constraints in the development of primate extrastriate visual cortex', venue: 'bioRxiv', href: 'https://www.biorxiv.org/content/10.64898/2026.02.04.703881v3' },
-  { author: 'Ellwood-Lowe ME, Nishio M, Dufford AJ, Arcaro MJ, Satterthwaite TD, Mackey AP', title: 'Cascading periods of language-related brain plasticity across early childhood', venue: 'bioRxiv', href: 'https://www.biorxiv.org/content/10.64898/2026.03.27.714739v1' },
 ];
 
 // Carousel papers — exactly matching current arcarolab.org homepage slides, in order
@@ -27,9 +26,10 @@ const CAROUSEL_PAPERS = [
 
 const PUBLICATIONS = [
   // 2026
-  { year: '2026', journal: 'PLOS Biology',      author: 'Oishi H, Berezovskii VK, Livingstone MS, Weiner KS, Arcaro MJ',                                            title: 'Metabolic organization of macaque visual cortex reflects visual field topography and perceptual specialization', href: 'https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003847' },
-  { year: '2026', journal: 'Neuron',               author: 'Ayzenberg V & Arcaro MJ',                                                                                  title: 'Functional organization of the human visual system at birth and across late gestation', href: 'https://www.sciencedirect.com/science/article/pii/S0896627326002679' },
-  { year: '2026', journal: 'Nature Communications', author: 'Guest DR, Allen EJ, Kay KN, Arcaro MJ',                                                                     title: 'Processing of natural scenes in the human pulvinar', href: 'https://www.nature.com/articles/s41467-025-67472-3' },
+  { year: '2026', journal: 'Developmental Science', author: 'Ellwood-Lowe ME, Nishio M, Dufford AJ, Arcaro MJ, Satterthwaite TD, Mackey AP',                                title: 'Cascading periods of language-related brain plasticity across early childhood', href: 'https://onlinelibrary.wiley.com/doi/10.1111/desc.70248' },
+  { year: '2026', journal: 'PLOS Biology',          author: 'Oishi H, Berezovskii VK, Livingstone MS, Weiner KS, Arcaro MJ',                                                title: 'Metabolic organization of macaque visual cortex reflects visual field topography and perceptual specialization', href: 'https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003847' },
+  { year: '2026', journal: 'Neuron',                author: 'Ayzenberg V & Arcaro MJ',                                                                                      title: 'Functional organization of the human visual system at birth and across late gestation', href: 'https://www.sciencedirect.com/science/article/pii/S0896627326002679' },
+  { year: '2026', journal: 'Nature Communications', author: 'Guest DR, Allen EJ, Kay KN, Arcaro MJ',                                                                        title: 'Processing of natural scenes in the human pulvinar', href: 'https://www.nature.com/articles/s41467-025-67472-3' },
   { year: '2026', journal: 'NeuroImage',            author: 'Nishio M, Wang X, Cornblath EJ, Lee SH, Shih YI, Palomero-Gallagher N, Arcaro MJ, Lydon-Staley DM, Mackey AP', title: 'Alcohol impacts an fMRI marker of neural inhibition in humans and rodents', href: 'https://www.sciencedirect.com/science/article/pii/S1053811926002144' },
 
   // 2025
@@ -37,8 +37,8 @@ const PUBLICATIONS = [
   { year: '2025', journal: 'PNAS',                  author: 'Meyer E, Martynek M, Kastner S, Livingstone MS, Arcaro MJ',                                                 title: 'Expansion of a conserved architecture drives the evolution of primate visual cortex', href: 'https://www.pnas.org/doi/10.1073/pnas.2421585122' },
   { year: '2025', journal: 'Current Biology',       author: 'Ayzenberg V, Song C, Arcaro MJ',                                                                            title: 'An intrinsic hierarchical, retinotopic organization of visual pulvinar connectivity in the human neonate', href: 'https://www.cell.com/current-biology/abstract/S0960-9822(24)01583-5' },
   { year: '2025', journal: 'Module in Neuroscience and Biobehavioral Psychology', author: 'Arcaro MJ, Willbrand EH, Amiez C, Maboudian SA, Weiner KS',                   title: 'Evolution of functional sulcal anatomy in primates', href: 'https://www.sciencedirect.com/science/article/abs/pii/B9780443273803000294?via%3Dihub' },
-  { year: '2025', journal: 'Nature Neuroscience',   author: 'Sydnor VJ, Bagautdinova J, Larsen B, Arcaro MJ, et al.',                                                   title: 'Human thalamocortical structural connectivity develops in line with a hierarchical axis of cortical plasticity', href: 'https://www.nature.com/articles/s41593-025-01991-6' },
-  { year: '2025', journal: 'eLife',                 author: 'Ellis CT, Yates TS, Arcaro MJ, Turk-Browne NB',                                                              title: 'Movies reveal the fine-grained organization of infant visual cortex', href: 'https://elifesciences.org/articles/92119' },
+  { year: '2025', journal: 'Nature Neuroscience',   author: 'Sydnor VJ, Bagautdinova J, Larsen B, Arcaro MJ, et al.',                                                    title: 'Human thalamocortical structural connectivity develops in line with a hierarchical axis of cortical plasticity', href: 'https://www.nature.com/articles/s41593-025-01991-6' },
+  { year: '2025', journal: 'eLife',                 author: 'Ellis CT, Yates TS, Arcaro MJ, Turk-Browne NB',                                                             title: 'Movies reveal the fine-grained organization of infant visual cortex', href: 'https://elifesciences.org/articles/92119' },
 
   // 2024
   { year: '2024', journal: 'Journal of Neuroscience', author: 'Bourne JA, Cichy RM, Kiorpes L, Morrone MC, Arcaro MJ, Nielsen KJ',                                       title: 'Development of higher-level vision: A network perspective', href: 'https://www.jneurosci.org/content/44/40/e1291242024' },
@@ -209,9 +209,9 @@ const OPENSCIENCE_PROJECTS = [
     id: 'brainana', title: 'Brainana',
     tagline: 'An automated, BIDS-compatible preprocessing pipeline for macaque MRI.',
     description: 'Brainana integrates structural and functional MRI preprocessing, cortical surface reconstruction, quality control reporting, and template-to-individual atlas projection in a unified macaque neuroimaging framework. Distributed as a containerized package with optional cloud execution, it has been evaluated on 23 datasets spanning task-evoked and resting-state data.',
-    img: 'https://brainana.readthedocs.io/en/latest/_images/brainana_unified_framework.png',
+    img: 'https://brainana.readthedocs.io/en/stable/_images/brainana_unified_framework.png',
     imgAlt: 'Brainana unified framework schematic',
-    links: [{ label: 'Documentation', href: 'https://brainana.readthedocs.io/en/latest/index.html' }],
+    links: [{ label: 'Documentation', href: 'https://brainana.readthedocs.io/en/stable/index.html' }],
   },
   {
 
