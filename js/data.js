@@ -111,7 +111,7 @@ const PUBLICATIONS = [
 
 const NEWS = [
   { date: 'June 2026', body: 'Big congrats to Hiroki on his macaque eccentricity histology paper. Out now in PLOS Biology!', link: 'https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003847' },
-  { date: 'Apr 2026', body: 'Big congrats to Jess on winning Penn\u2019s Eliot Stellar Prize for her honors thesis on tree shrew object recognition behavior.' },
+  { date: 'Apr 2026', body: 'Big congrats to Jess on winning Penn’s Eliot Stellar Prize for her honors thesis on tree shrew object recognition behavior.' },
   { date: 'Apr 2026', body: 'Big congrats to Vlad on his paper on the development of neonate visual cortex. Out now in Neuron!', link: 'https://www.cell.com/neuron/fulltext/S0896-6273(26)00267-9' },
   { date: 'Dec 2025', body: 'Big congrats to Danny on his paper on natural scene processing in the human pulvinar. Out now in Nature Communications!', link: 'https://www.nature.com/articles/s41467-025-67472-3' },
   { date: 'Sept 2025', body: 'Big congrats to Monami on her paper mapping inside-out development of myelination in macaques and humans. Out now in PLOS Biology!', link: 'https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003378' },
@@ -151,7 +151,7 @@ const ALUMNI = [
   { name: 'Hiroki Oishi',       position: 'Assistant Professor, NIPS',              href: 'https://scholar.google.com/citations?user=0q6ri-8AAAAJ&hl=ja' },
   { name: 'Marcelina Martynek' },
   { name: 'Marco Balboa' },
-  { name: 'Jennifer O\u2019Neill' },
+  { name: 'Jennifer O’Neill' },
   { name: 'Wei Song Ong' },
   { name: 'Lucy Song' },
   { name: 'Jess Wu' },
@@ -215,11 +215,21 @@ const OPENSCIENCE_PROJECTS = [
     links: [{ label: 'Documentation', href: 'https://brainana.readthedocs.io/en/stable/index.html' }],
   },
   {
+    id: 'brainana-viewer', title: 'Brainana Viewer',
+    tagline: 'A cross-platform desktop app for exploring macaque brain MRI.',
+    description: 'Brainana Viewer displays anatomical volumes, rotatable 3D cortical surfaces, atlases, and functional maps produced by the Brainana pipeline. Features include surface morphometry (curvature, depth, thickness), automatic atlas parcellation overlays with cursor read-out of the region under the crosshair, and retinotopic and somatotopic maps on both volume and surface. Datasets can be loaded from a local folder or a remote lab workstation over SSH/SFTP, and subjects can be switched on the fly to compare across monkeys. Built on NiiVue and WebGL2, it runs on macOS, Windows, and Linux. A demo dataset is included in the repository.',
+    img: 'https://raw.githubusercontent.com/arcaro-lab/brainana_tools/main/docs/_static/brainana_viewer_big.png',
+    imgAlt: 'Brainana Viewer showing a macaque cortical surface, atlas overlay, and slice views',
+    links: [
+      { label: 'GitHub Repository', href: 'https://github.com/arcaro-lab/brainana_tools' },
+      { label: 'Download', href: 'https://github.com/arcaro-lab/brainana_tools/releases/latest' },
+    ],
+  },
+  {
 
     id: 'shrewModularbox', title: 'ModularShrewBox',
     tagline: 'A low-cost, modular behavior box for visual experiments in small animals.',
-    description: 'Designed for tree shrews and other small animals. Stepper-motor reward pumps, adjustable monitor mount, capacitive touch pads, and an onboard Raspberry Pi. Laser-cut and 3D-printable, daisy-chainable, and driven by Python/PsychoPy.',
-    note: 'We are updating some components to the box. If interested in building, please reach out for guidance.',
+    description: 'Designed for tree shrews and other small animals. Stepper-motor reward pumps, adjustable monitor mount, capacitive touch pads, and an onboard Raspberry Pi. Laser-cut and 3D-printable, daisy-chainable, and driven by Python/PsychoPy.\n\nThe repository is public, but we are actively updating components of the box. If interested in building, please reach out to make sure you have the latest version and for guidance.',
     img: 'https://raw.githubusercontent.com/arcaro-lab/ShrewBox/main/Pictures/behaviorbox.png',
     imgAlt: 'ShrewBox behavior apparatus',
     links: [{ label: 'GitHub Repository', href: 'https://github.com/arcaro-lab/ShrewBox' }],
@@ -228,7 +238,7 @@ const OPENSCIENCE_PROJECTS = [
   {
     id: 'shrew3Dbox', title: '3D In-Cage Display',
     tagline: 'A low-cost behavior box for in-cage visual experiments in small animals.',
-    description: 'Designed for tree shrews and other small animals. Dual display leveraging the Pepper\'s Ghost illusion for a holographic-like display, and an onboard Raspberry Pi for visual stimulus delivery.',
+    description: 'Designed for tree shrews and other small animals. Dual display leveraging the Pepper\'s Ghost illusion for a holographic-like display, and an onboard Raspberry Pi for visual stimulus delivery.\n\nThe repository is not live yet. If interested in building, please reach out.',
     img: 'img/research-img/DesignV5v5.png',
     imgAlt: '3D in-cage display apparatus',
     links: [{ label: 'GitHub Repository - Coming Soon', href: '' }],
@@ -378,7 +388,7 @@ const SPECIES = [
     labWork: "Tree shrews let us ask which features of high-level vision are specific to primates and which reflect broader principles of mammalian visual system organization. They are close relatives of primates with an organized visual cortex, but unlike humans and macaques they lack a fovea and have coarser visual acuity. This combination allows us to test whether sophisticated visual abilities require primate-like visual precision, or whether they can emerge from a compact visual system organized around similar computational principles. Our work examines how tree shrews recognize objects, generalize across visual change, and flexibly use different kinds of visual information as task demands change.",
     papers: [
       { author: 'Meyer EE, Ong WS, Cottaris NP, Zhang L, Collina J, Brainard DH, Arcaro MJ', year: 2026, title: 'Transformation-tolerant object recognition in tree shrews despite lacking a fovea', journal: 'bioRxiv', href: 'https://www.biorxiv.org/content/10.64898/2026.04.10.717715v1' },
-      
+
     ],
   },
 ];
